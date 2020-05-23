@@ -10,10 +10,85 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_23_163739) do
+ActiveRecord::Schema.define(version: 2020_05_23_171620) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bought_subjects", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "subject_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["subject_id"], name: "index_bought_subjects_on_subject_id"
+    t.index ["user_id"], name: "index_bought_subjects_on_user_id"
+  end
+
+  create_table "cart_subjects", force: :cascade do |t|
+    t.bigint "cart_id", null: false
+    t.bigint "subject_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["cart_id"], name: "index_cart_subjects_on_cart_id"
+    t.index ["subject_id"], name: "index_cart_subjects_on_subject_id"
+  end
+
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "subject_id", null: false
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["subject_id"], name: "index_comments_on_subject_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "course_subjects", force: :cascade do |t|
+    t.bigint "course_id", null: false
+    t.bigint "subject_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["course_id"], name: "index_course_subjects_on_course_id"
+    t.index ["subject_id"], name: "index_course_subjects_on_subject_id"
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "exercises", force: :cascade do |t|
+    t.bigint "subject_id", null: false
+    t.string "name"
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["subject_id"], name: "index_exercises_on_subject_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "subject_id", null: false
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["subject_id"], name: "index_reviews_on_subject_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +102,15 @@ ActiveRecord::Schema.define(version: 2020_05_23_163739) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bought_subjects", "subjects"
+  add_foreign_key "bought_subjects", "users"
+  add_foreign_key "cart_subjects", "carts"
+  add_foreign_key "cart_subjects", "subjects"
+  add_foreign_key "comments", "subjects"
+  add_foreign_key "comments", "users"
+  add_foreign_key "course_subjects", "courses"
+  add_foreign_key "course_subjects", "subjects"
+  add_foreign_key "exercises", "subjects"
+  add_foreign_key "reviews", "subjects"
+  add_foreign_key "reviews", "users"
 end
