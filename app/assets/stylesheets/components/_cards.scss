@@ -1,0 +1,61 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px 16px;
+}
+
+.card-features {
+  margin-right: 16px;
+  margin-bottom: 16px;
+
+  width: 240px;
+  height: 210px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 3px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-features h2 {
+  font-size: 18px;
+  text-align: center;
+}
+
+.card-features p {
+  font-size: 12px;
+  text-align: center
+}
+//---------------------
+
+.card-feature-title {
+  min-height: 50px;
+}
+
+.card-feature-content {
+  padding-bottom: 6px;
+}
+
+.card-feature-btn {
+  min-height: 40px;
+}
+//---------------------
+
+.card-offer {
+
+}
+
+.card-offer h2 {
+  font-size: 18px;
+  text-align: center;
+}
+
+.card-offer p {
+  font-size: 12px;
+  text-align: center;
+}
