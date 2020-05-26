@@ -22,6 +22,9 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+input {
+    line-height: normal;
+}
 .card-features h2 {
   font-size: 18px;
   text-align: center;
@@ -59,3 +62,269 @@
   font-size: 12px;
   text-align: center;
 }
+
+
+// Css da nav bar by charlies
+.c_header {
+    background: #fff;
+    box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+    display: block;
+    position: relative;
+    z-index: 1010;
+}
+
+.c_header__inner {
+    display: flex;
+    justify-content: space-between;
+    background: inherit;
+    box-sizing: border-box;
+    height: 65px;
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1011;
+}
+
+.c_header .c_header__logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.c_header .c_header__logo-wrap {
+    margin: 0 16px 0 0;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+}
+
+.c_header .c_header__left {
+    flex: 1;
+    min-width: 1px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.c_header .c_header__mobile-bt {
+    display: none;
+    background: 0 0;
+    border: none;
+    font-size: 24px;
+    color: #686f7a;
+    width: 48px;
+    height: 48px;
+    touch-action: pan-y;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    padding: 0;
+}
+
+.c_header .dropdown {
+    font-size: 13px;
+    margin: 0 2px;
+    padding: 10px 0;
+}
+
+.c_header .c_header__search-wrapper {
+    margin: 0 25px;
+    max-width: 630px;
+    width: 100%;
+}
+
+.c_header .c_header__mobile-bt {
+    display: none;
+    background: 0 0;
+    border: none;
+    font-size: 24px;
+    color: #686f7a;
+    width: 48px;
+    height: 48px;
+    touch-action: pan-y;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    padding: 0;
+}
+
+.c_header .c_header__mobile-bt .udi-search {
+    font-size: 20px;
+    vertical-align: 1px;
+}
+
+.dropup, .dropdown {
+    position: relative;
+}
+
+.c_header .dropdown {
+    font-size: 13px;
+}
+.pos-r {
+    position: relative;
+}
+
+.c_header .c_quick-search__form .dropdown {
+    margin: 0;
+    padding: 0;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+label, .blockLabel {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.es-autocomplete--primary .input-group {
+    background-color: #f2f3f5;
+    border-radius: 2px;
+}
+
+.input-group-addon, .input-group-btn {
+    width: 1%;
+    vertical-align: middle;
+}
+
+.input-group-addon, .input-group-btn, .input-group .form-control {
+    display: table-cell;
+}
+
+.c_header .header-right-divider {
+    height: 60%;
+    border-left: 1px solid #dedfe0;
+    margin: 0 8px;
+}
+
+.c_header .dropdown--icon .dropdown-toggle {
+    border-radius: 50%;
+    padding: 12px 0;
+    width: 45px;
+}
+
+.c_header .dropdown-toggle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: #505763;
+    font-weight: 400;
+    height: 45px;
+    line-height: 20px;
+    white-space: nowrap;
+}
+
+.ml-space-sm {
+    margin-left: 16px;
+}
+
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 11px 12px;
+    font-size: 15px;
+    line-height: 1.35135;
+    border-radius: 2px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.btn-quaternary {
+    color: #686f7a;
+    background-color: #fff;
+    border: 1px solid #686f7a;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button {
+    overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1edd88;
+    border: 1px solid transparent;
+}
+
+.c_header .dropdown {
+    font-size: 13px;
+    margin: 0 2px;
+    padding: 10px 0;
+}
+
+.c_header .c_header__right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.search-form-control {
+  position: relative;
+}
+
+.search-form-control .btn {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  right: 8px;
+}
+
+.search-form-control .form-control {
+  height: 3.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border: 1px solid #E7E7E7;
+  margin-top: 15px;
+}
+
+.search-form-control .form-control:focus {
+  border: 1px solid #1EDD88;
+  outline: none !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+// Css da nav bar by charlies FIM
