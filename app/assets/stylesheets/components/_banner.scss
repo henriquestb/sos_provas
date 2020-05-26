@@ -1,0 +1,125 @@
+body {
+    font-family: Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+    font-size: 15px;
+    line-height: 1.43;
+    color: #29303b;
+    background-color: #fff;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+.main-content-wrapper, .main-content {
+    flex: 1 0 auto;
+}
+.notice-streamer {
+    background-image: url(https://img-a.udemycdn.com/notices/home_banner/image/048e0cdc-3e71-47dc-ae30-e9ac7a3504b5.jpg);
+}
+
+.notice-streamer {
+    display: flex;
+    align-items: flex-end;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+
+.notice-streamer {
+    align-items: center;
+    height: 500px;
+    padding: 0;
+}
+
+.carousel-fullscreen-sidebar {
+    margin: 30px auto;
+}
+
+.carousel-fullscreen-sidebar {
+    width: 754px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.carousel-fullscreen-sidebar {
+    width: 1174px;
+}
+
+.notice-streamer__content {
+    max-width: 460px;
+}
+
+.notice-streamer__content {
+    box-sizing: content-box;
+}
+
+.notice-streamer__headline {
+    color: #fff;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.17;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(41,48,59,.55);
+}
+
+.notice-streamer__headline {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.33;
+    font-family: Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+}
+
+.notice-streamer__headline, .notice-streamer__text {
+    max-width: 100%;
+}
+
+.notice-streamer__text {
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.46;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(41,48,59,.55);
+}
+.notice-streamer__text {
+    font-size: 18px;
+    line-height: 1.61;
+}
+
+.notice-streamer__headline, .notice-streamer__text {
+    max-width: 100%;
+}
+
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #1BCB7F;
+  color: white;
+}
+
+.how-udemy-works-container {
+    display: block;
+    border: none;
+    background: -webkit-linear-gradient(-45deg,#EC5252 0%,#6E1A52 100%);
+    background: -moz-linear-gradient(-45deg,#EC5252 0%,#6E1A52 100%);
+    background: -ms-linear-gradient(-45deg,#EC5252 0%,#6E1A52 100%);
+    background: -o-linear-gradient(-45deg,#EC5252 0%,#6E1A52 100%);
+    background: linear-gradient(-45deg,#EC5252 0%,#6E1A52 100%);
+}
+
+.how-udemy-works {
+    display: flex;
+    margin-bottom: 24px;
+    margin-top: 0;
+}
+
