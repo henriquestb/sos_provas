@@ -40,12 +40,21 @@ ActiveRecord::Schema.define(version: 2020_05_23_174509) do
 
   create_table "comments", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "subject_id", null: false
-    t.text "content"
+    t.bigint "content_id", null: false
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["subject_id"], name: "index_comments_on_subject_id"
+    t.index ["content_id"], name: "index_comments_on_content_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "contents", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.bigint "subject_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["subject_id"], name: "index_contents_on_subject_id"
   end
 
   create_table "course_subjects", force: :cascade do |t|
@@ -65,18 +74,18 @@ ActiveRecord::Schema.define(version: 2020_05_23_174509) do
   end
 
   create_table "exercises", force: :cascade do |t|
-    t.bigint "subject_id", null: false
+    t.bigint "content_id", null: false
     t.string "name"
-    t.text "content"
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["subject_id"], name: "index_exercises_on_subject_id"
+    t.index ["content_id"], name: "index_exercises_on_content_id"
   end
 
   create_table "reviews", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "subject_id", null: false
-    t.text "content"
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["subject_id"], name: "index_reviews_on_subject_id"
@@ -111,11 +120,12 @@ ActiveRecord::Schema.define(version: 2020_05_23_174509) do
   add_foreign_key "bought_subjects", "users"
   add_foreign_key "cart_subjects", "carts"
   add_foreign_key "cart_subjects", "subjects"
-  add_foreign_key "comments", "subjects"
+  add_foreign_key "comments", "contents"
   add_foreign_key "comments", "users"
+  add_foreign_key "contents", "subjects"
   add_foreign_key "course_subjects", "courses"
   add_foreign_key "course_subjects", "subjects"
-  add_foreign_key "exercises", "subjects"
+  add_foreign_key "exercises", "contents"
   add_foreign_key "reviews", "subjects"
   add_foreign_key "reviews", "users"
   add_foreign_key "users", "courses"

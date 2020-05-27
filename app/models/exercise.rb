@@ -1,5 +1,5 @@
 class Exercise < ApplicationRecord
   validates :name, presence: true
-  validates :content, presence: true
-  belongs_to :subject
+  validates :description, presence: true
+  belongs_to :content
 end
