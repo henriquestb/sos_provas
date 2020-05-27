@@ -1,15 +1,16 @@
 .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
   grid-gap: 16px 16px;
 }
 
 .card-features {
   margin-right: 16px;
-  margin-bottom: 16px;
-
-  width: 240px;
-  height: 210px;
+  margin-bottom: 20px;
+  width: 250px;
+  height: 350px;
 
   display: flex;
   flex-direction: column;
@@ -38,10 +39,21 @@ input {
 
 .card-feature-title {
   min-height: 50px;
+  margin-top: 28px;
+  text-overflow: ellipsis;
+  white-space: normal;
+  font-weight: 700;
+  height: 42px;
+  font-size: 15px;
+  color: #29303b;
 }
 
 .card-feature-content {
   padding-bottom: 6px;
+    white-space: normal;
+    font-weight: 500;
+    color: #29303b;
+    margin-bottom: 10px;
 }
 
 .card-feature-btn {
