@@ -4,10 +4,10 @@
     <div class="carousel-fullscreen-sidebar">
       <div class="notice-streamer__content">
         <div class="notice-streamer__headline">
-          Learn on your schedule
+          Aprenda no seu ritmo
         </div>
         <div class="notice-streamer__text">
-          Study any topic, anytime. Choose from thousands of expert-led courses now.
+          Estude qualquer materia, a qualquer hora. Escolha uma de nossas materias e seja aprovado!.
         </div>
       <a class="btn btn-flat btn-lg btn-block" href="#">Descubra as nossas aulas</a>
       </div>
@@ -16,36 +16,85 @@
 
   <!-- Banner autoridade-->
   <div class="authority-container">
-  <div class="authority carousel-fullscreen-sidebar">
-    <div class="authority__col">
-      <div class="authority__text">
-        <b>45 materias online</b>
-        <div class="authority__sub-title">
-         Aprenda como você nunca aprendeu antes
+    <div class="authority carousel-fullscreen-sidebar">
+      <div class="authority__col">
+        <div class="authority__text">
+          <b>45 materias online</b>
+          <div class="authority__sub-title">
+           Aprenda como você nunca aprendeu antes
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="authority__col">
-      <div class="authority__text">
-        <b>Professeres Experientes</b>
-        <div class="authority__sub-title">
-          Ache o melhor para você
+      <div class="authority__col">
+        <div class="authority__text">
+          <b>Professeres Experientes</b>
+          <div class="authority__sub-title">
+            Ache o melhor para você
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="authority__col">
-      <div class="authority__text">
-        <b>Acesso para a vida inteira</b>
-        <div class="authority__sub-title">
-          Aprenda no seu tempo
+      <div class="authority__col">
+        <div class="authority__text">
+          <b>Acesso para a vida inteira</b>
+          <div class="authority__sub-title">
+            Aprenda no seu tempo
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+  <!-- courses infos -->
+  <div class="subjects-title">
+    Para aprovar em qualquer materia, conte com o Sos Provas !
+  </div>
+  <div class="container d-flex justify-content-around">
+    <%= link_to subject_path(subject) do %>
+      <div class="cards">
+        <div class="card-features">
+          <i class="fas fa-stethoscope fa-4x"></i>
+          <div class="card-feature-title">
+            <h2><strong>Aulas de Medicina</strong></h2>
+          </div>
+          <div class="card-feature-content">
+            <p>Precisa de ajuda em Medicina? Temos o conteúdo completo e ainda mais recursos para uma preparação com excelência.</p>
+          </div>
+          <div class="card-feature-btn">
+            <a href="">SAIBA MAIS</a>
+          </div>
+        </div>
 
+        <div class="card-features">
+          <i class="fas fa-square-root-alt fa-3x"></i>
+          <div class="card-feature-title">
+            <h2><strong>Aulas de Economia</strong></h2>
+          </div>
+          <div class="card-feature-content">
+            <p>Precisa de ajuda em Economia? Temos o conteúdo completo e ainda mais recursos para uma preparação com excelência.</p>
+          </div>
+          <div class="card-feature-btn">
+            <a href="">SAIBA MAIS</a>
+          </div>
+        </div>
+
+        <div class="card-features">
+          <i class="fas fa-calculator fa-3x"></i>
+          <div class="card-feature-title">
+            <h2><strong>Aulas de Engenharia</strong></h2>
+          </div>
+          <div class="card-feature-content">
+            <p>Precisa de ajuda em Egenharia? Temos o conteúdo completo e ainda mais recursos para uma preparação com excelência.</p>
+          </div>
+          <div class="card-feature-btn">
+            <button type="button" class="btn btn-outline-secondary btn-lg btn-block" >
+                  Ver mais
+                </button>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
   <!-- Testimonials -->
   <div class="testimonial-title">
     O que os nossos alunos tem a dizer
@@ -88,50 +137,33 @@
         SOS Provas savou meu semestre. Estava perdido, desesperado e sem saber como estudar
       </div>
     </div>
-
   </div>
 </div>
 
   <!-- V Parte do bertucci V -->
-<div class="container d-flex justify-content-around">
-  <div class="cards">
-    <div class="card-features">
-      <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="notebook" width="50" height="50">
-      <div class="card-feature-title">
-        <h2><strong>Aprenda com os melhores alunos</strong></h2>
-      </div>
-      <div class="card-feature-content">
-        <p>Esses alunos passarem com as melhores notas e vão te mostrar como fazer o mesmo!</p>
-      </div>
-      <div class="card-feature-btn">
-        <a href="">SAIBA MAIS</a>
-      </div>
-    </div>
 
-    <div class="card-features">
-      <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="notebook" width="50" height="50">
-      <div class="card-feature-title">
-        <h2><strong>Acesse os melhores materiais</strong></h2>
-      </div>
-      <div class="card-feature-content">
-        <p>Estude de forma mais inteligente e salve tempo!</p>
-      </div>
-      <div class="card-feature-btn">
-        <a href="">SAIBA MAIS</a>
-      </div>
-    </div>
-  </div>
 
-  <div class="card-offer">
+ <!--  <div class="card-offer">
     <h2><strong>Exercícos específicos</strong></h2>
     <p>Estude aquilo que vai cair na prova!</p>
-  </div>
+  </div> -->
   <!-- Feedbacks -->
 
 
 
 
+<!-- footer -->
+</div>
 
-
-
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    Texto para o footer<i class="fas fa-heart"></i>
+  </div>
 </div>
