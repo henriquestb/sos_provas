@@ -1,0 +1,56 @@
+// feedbacks
+.row-testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  justify-content: center;
+}
+
+.testimonial-title {
+  display: flex;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.33em;
+  justify-content: center;
+  font-family: Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+}
+
+.card-testimonial {
+  height: 100%;
+  display: flex;
+  padding: 32px;
+  min-height: 260px;
+  border-radius: 3px;
+  margin-right: 13px;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(20,23,28,.15);
+}
+
+.card-testimonial .review {
+  display: flex;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5em;
+  align-items: center;
+  margin-bottom: 18px;
+  font-family: Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+}
+
+.card-testimonial img {
+  border: 0;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 18px;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
+
+.card-testimonial .testimonial-content {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5em;
+}
