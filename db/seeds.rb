@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 CartSubject.destroy_all
 Content.destroy_all
 Subject.destroy_all
@@ -12,8 +13,11 @@ Comment.destroy_all
 Review.destroy_all
 Exercise.destroy_all
 User.destroy_all
+Course.destroy_all
 
-engenharia = Course.create!(name: 'Engenharia', description: 'Materias de calculo 1')
+medicina = Course.create!(name: 'Medicina', description: 'Precisa de ajuda em Medicina? Temos o conteúdo completo e ainda mais recursos para uma preparação com excelência.', icon: '<i class="fas fa-stethoscope fa-4x"></i>')
+economia = Course.create!(name: 'Economia', description: 'Precisa de ajuda em Economia? Temos o conteúdo completo e ainda mais recursos para uma preparação com excelência.', icon: '<i class="fas fa-square-root-alt fa-3x"></i>')
+engenharia = Course.create!(name: 'Engenharia', description: 'Precisa de ajuda em Egenharia? Temos o conteúdo completo e ainda mais recursos para uma preparação com excelência.', icon: '<i class="fas fa-calculator fa-3x"></i>')
 user = User.create!(email: "oi@oi.com", password: "123456", course: engenharia)
 calculo = Subject.create!(name: 'calculo', description: 'Limites, Derivadas, Integrais')
 engenharia.subjects << calculo
