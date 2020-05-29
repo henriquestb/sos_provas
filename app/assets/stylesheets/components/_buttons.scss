@@ -1,0 +1,55 @@
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 11px 12px;
+  font-size: 15px;
+  line-height: 1.35135;
+  border-radius: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1edd88;
+  border: 1px solid transparent;
+}
+
+// Botão do cadastre-se
+.btn-quaternary {
+  color: #686f7a;
+  background-color: #fff;
+  border: 1px solid #686f7a;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+}

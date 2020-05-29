@@ -9,7 +9,7 @@
         <div class="notice-streamer__text">
           Estude qualquer materia, a qualquer hora. Escolha uma de nossas materias e seja aprovado!.
         </div>
-      <a class="btn btn-flat btn-lg btn-block" href="#">Descubra as nossas aulas</a>
+        <a class="btn btn-flat btn-lg btn-block" href="#">Descubra as nossas aulas</a>
       </div>
     </div>
   </div>
@@ -50,24 +50,24 @@
     Para ser aprovado em qualquer materia, conte com o Sos Provas!
   </div>
   <div class="container d-flex justify-content-around">
-      <div class="cards">
-        <% @courses.each do |course| %>
+    <div class="cards">
+      <% @courses.each do |course| %>
         <%= link_to course_path(course), class: 'link' do %>
-        <div class="card-features">
-          <%= course.icon.html_safe %>
-          <div class="card-feature-title">
-            <h2><strong>Aulas de <%= course.name %></strong></h2>
+          <div class="card-features">
+            <%= course.icon.html_safe %>
+            <div class="card-feature-title">
+              <h2><strong>Aulas de <%= course.name %></strong></h2>
+            </div>
+            <div class="card-feature-content">
+              <p><%= course.description %></p>
+            </div>
+            <div class="card-feature-btn">
+              <a href="/courses/<%= course.id %>">SAIBA MAIS</a>
+            </div>
           </div>
-          <div class="card-feature-content">
-            <p><%= course.description %></p>
-          </div>
-          <div class="card-feature-btn">
-            <a href="/courses/<%= course.id %>">SAIBA MAIS</a>
-          </div>
-        </div>
         <% end %>
-        <% end %>
-      </div>
+      <% end %>
+    </div>
   </div>
   <!-- Testimonials -->
   <div class="testimonial-title">
@@ -112,19 +112,4 @@
       </div>
     </div>
   </div>
-</div>
-
-  <!-- V Parte do bertucci V -->
-
-
- <!--  <div class="card-offer">
-    <h2><strong>Exercícos específicos</strong></h2>
-    <p>Estude aquilo que vai cair na prova!</p>
-  </div> -->
-  <!-- Feedbacks -->
-
-
-
-
-<!-- footer -->
 </div>
