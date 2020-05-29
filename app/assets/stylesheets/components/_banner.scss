@@ -135,3 +135,59 @@ color: white;
 .footer .fa-heart {
   color: #D23333;
 }
+
+// banner show
+
+.header-program h1 {
+    margin: 0 0 12px;
+    line-height: inherit;
+    font-size: 41px;
+    font-family: CircularStd-Black,SimHei;
+}
+
+p {
+    margin: 0 0 30px;
+}
+
+.cta {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 12px 36px;
+    min-width: 95px;
+    border-radius: 3px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .15s ease;
+}
+
+.header-program img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 105%;
+    height: 520px;
+    border-radius: 6px;
+    z-index: 6;
+}
+
+.adjust {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.half-left {
+  flex: 0 0 50%;
+}
+
+.half-bottom {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+  width: 50%;
+}
