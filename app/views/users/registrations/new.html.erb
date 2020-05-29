@@ -1,36 +1,29 @@
-<h2>Sign up</h2>
-<div>
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+<div class="container mx-auto col-4">
+<h2 class="centralizar2">Registrar</h2>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email,
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" }%>
+        <%= f.input :course, label: 'Curso',
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :course,
-            required: true,
-            autofocus: true,
-            input_html: { autocomplete: "course" },
-            collection: Course.all %>
-    <%= f.input :password,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-  </div>
+                input_html: { autocomplete: "course" },
+                collection: Course.all %>
+        <%= f.input :password, label: 'Senha',
+                    required: true,
+                    input_html: { autocomplete: "new-password" } %>
+        <%= f.input :password_confirmation, label: 'Confirme sua senha',
+                    required: true,
+                    input_html: { autocomplete: "new-password" } %>
+      </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+      <div class="form-actions">
+        <%= f.button :submit, "Cadastrar", class: 'btn btn-primary full-large2' %>
+      </div>
+    <% end %>
 
-
-<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to "Cadastre-se", new_registration_path(resource_name), class: "btn btn-quaternary" %><br />
-<% end %>
 </div>
-<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <%= link_to "Esqueceu sua senha?", new_password_path(resource_name) %><br />
-<% end %>
