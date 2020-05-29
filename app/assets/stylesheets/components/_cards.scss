@@ -6,6 +6,55 @@
   grid-gap: 16px 16px;
 }
 
+// Card da matéria dentro da página do curso
+.cards-subject {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 30px;
+  margin-top: 30px;
+  grid-gap: 16px 16px;
+}
+
+.card-subject {
+  width: 210px;
+  height: 260px;
+
+  margin-bottom: 25px;
+  margin-right: 25px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 15px;
+  justify-content: flex-end;
+
+  border-radius: 3px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-subject h2 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.card-subject p {
+  font-size: 14px;
+  text-align: center;
+  opacity: .7;
+  margin-bottom: 4px;
+}
+
+.card-subject a {
+  font-weight: bold;
+  margin-top: 10px;
+  color: black;
+  background-color: #19bb73;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+}
+
 .card-features {
   margin-right: 16px;
   margin-bottom: 20px;
@@ -26,6 +75,7 @@
 input {
   line-height: normal;
 }
+
 .card-features h2 {
   font-size: 18px;
   text-align: center;

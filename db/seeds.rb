@@ -20,11 +20,13 @@ economia = Course.create!(name: 'Economia', description: 'Precisa de ajuda em Ec
 engenharia = Course.create!(name: 'Engenharia', description: 'Precisa de ajuda em Egenharia? Temos o conteúdo completo e ainda mais recursos para uma preparação com excelência.', icon: '<i class="fas fa-calculator fa-3x"></i>')
 user = User.create!(email: "oi@oi.com", password: "123456", course: engenharia)
 calculo = Subject.create!(name: 'calculo', description: 'Limites, Derivadas, Integrais')
+
 engenharia.subjects << calculo
 engenharia.save!
 derivada = Content.create!(name: 'Derivada', description: 'A 2a matéria de cálculo 1', subject: calculo)
 calculo.contents << derivada
 calculo.save!
+
 comment = Comment.new(description: 'Fiquei com duvida no minuto 52')
 comment.user = user
 comment.content = derivada
@@ -34,6 +36,7 @@ review = Review.new(description: 'Muito bom a aula, 0 estrelas')
 review.user = user
 review.subject = calculo
 review.save!
+
 exercise = Exercise.new(description: 'Joao tinha 3 ovos, cortaram seu role, quantos ele tem agora', name: 'Aplicação de matematica')
 exercise.content = derivada
 exercise.save!
