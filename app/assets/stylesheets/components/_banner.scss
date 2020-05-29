@@ -110,11 +110,14 @@ color: white;
 }
 
 .footer {
+  margin-top: 48px;
   background: linear-gradient(-45deg, #52ec9e 0%, #1a6a6e 100%);
   display: flex;
+  position: absolute;
   align-items: center;
   justify-content: space-between;
   height: 100px;
+  width: 100%;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
 }
