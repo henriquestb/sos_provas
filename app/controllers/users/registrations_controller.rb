@@ -17,6 +17,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user.password = params[:user][:password]
     @user.course = @course
     @user.save!
+    sign_in @user
     redirect_to root_path
   end
 

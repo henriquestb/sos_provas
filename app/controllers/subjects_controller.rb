@@ -8,9 +8,7 @@ class SubjectsController < ApplicationController
     @subjects = Subject.all
   end
 
-  def show
-    @doses = @subject.doses
-  end
+  def show; end
 
   # GET /subjects/new
   def new
@@ -43,7 +41,7 @@ class SubjectsController < ApplicationController
   end
 
   def create
-    @subject = subject.new(subject_params)
+    @subject = Subject.new(subject_params)
 
     respond_to do |format|
       if @subject.save
@@ -59,7 +57,7 @@ class SubjectsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
   def set_subject
-    @subject = subject.find(params[:id])
+    @subject = Subject.find(params[:id])
   end
   # Only allow a list of trusted parameters through.
   def subject_params
