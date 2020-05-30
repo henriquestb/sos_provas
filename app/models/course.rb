@@ -4,4 +4,5 @@ class Course < ApplicationRecord
   has_many :course_subjects, dependent: :destroy
   has_many :users
   has_many :subjects, through: :course_subjects
+  has_one_attached :photo
 end
