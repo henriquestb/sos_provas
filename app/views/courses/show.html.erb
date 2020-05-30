@@ -12,22 +12,29 @@
   </div>
 </div>
 
-
-<div class="cards-subject">
-  <% Subject.all.select{ |sub| sub.courses.include?(@course) }.each do |subject| %>
-    <div class="card-subject">
-      <img src="https://images.unsplash.com/photo-1530210124550-912dc1381cb8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
-      <div class="card-subject-content ">
-        <div>
-          <h2><%= subject.name %></h2>
-          <p>32 horas de aula</p>
-          <p>54 exercícios</p>
-          <p>XXXXX (124)</p>
-          <div class="text-center mt-2">
-            <a class="btn btn-primary" href="">COMPRAR AGORA</a>
-          </div>
+<div class="container mx-auto">
+  <div class="cards-subject">
+    <div class="row">
+      <% Subject.all.select{ |sub| sub.courses.include?(@course) }.each do |subject| %>
+        <div class="col-4">
+          <%= link_to course_subject_path(@course, subject), class: "link" do %>
+            <div class="card-subject">
+              <img src="https://images.unsplash.com/photo-1530210124550-912dc1381cb8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+              <div class="card-subject-content ">
+                <div>
+                  <h2><%= subject.name %></h2>
+                  <p>32 horas de aula</p>
+                  <p>54 exercícios</p>
+                  <p>XXXXX (124)</p>
+                  <div class="text-center mt-2">
+                    <a class="btn btn-primary" href="">COMPRAR AGORA</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
         </div>
-      </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 </div>
