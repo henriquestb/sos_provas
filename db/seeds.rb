@@ -53,7 +53,7 @@ CourseSubject.create!(course: medicina, subject: fisiologia)
 CourseSubject.create!(course: medicina, subject: imunologia)
 
 #Contents
-limite = Content.create!(name: 'Limite', description: 'O ponto em que a derivada se iguala a 0.', subject: engenharia)
+limite = Content.create!(name: 'Limite', description: 'O ponto em que a derivada se iguala a 0.', subject: calculo1)
 
 engenharia.subjects << calculo1
 engenharia.save!
