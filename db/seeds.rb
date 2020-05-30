@@ -46,14 +46,14 @@ CourseSubject.create!(course: economia, subject: micro2)
 CourseSubject.create!(course: economia, subject: macro1)
 CourseSubject.create!(course: economia, subject: macro2)
 CourseSubject.create!(course: economia, subject: estatistica2)
-CourseSubject.create!(course: medicina, subject: anatomia)
+CourseSubject.create!(course: medicina, subject: anatomia1)
 CourseSubject.create!(course: medicina, subject: anatomia2)
 CourseSubject.create!(course: medicina, subject: bioquimica)
 CourseSubject.create!(course: medicina, subject: fisiologia)
 CourseSubject.create!(course: medicina, subject: imunologia)
 
 #Contents
-limite = Content.create!(name: 'Limite', description: 'O ponto em que a derivada se iguala a 0.', subject: engenharia)
+limite = Content.create!(name: 'Limite', description: 'O ponto em que a derivada se iguala a 0.', subject: calculo1)
 
 engenharia.subjects << calculo1
 engenharia.save!
