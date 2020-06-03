@@ -1,101 +1,81 @@
-.syllabus-container {
-  display: flex;
-  height: calc(100vh - 45px - 53px);
+.sidenav {
+  height: 100%;
+  width: 200px;
+  flex: 0 0 20%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f3f3f3;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
-.syllabus-content, .days-nav {
-    transition: opacity 0.3s ease-in-out;
+.content {
+  flex: 0 0 80%;
 }
 
-.days-nav {
-    padding-bottom: 33vh;
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
 }
 
-.days-nav a, .days-nav a:hover, .days-nav a:focus, .days-nav a:visited {
-    text-decoration: none;
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #121312;
 }
 
-.days-nav .module-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
 }
 
-
-a {
-    color: #474545;
-    font-weight: 400;
-    font-family: "Kievit", "Helvetica", "sans-serif";
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
 }
 
-.days-nav .module-header .module-header-name {
-    display: flex;
-    align-items: center;
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
 }
 
-.days-nav .module-header .module-icon-container {
-    display: flex;
-    align-items: center;
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
 }
 
-.days-nav .module-header .module-header-name span {
-    padding-left: 10px;
-    font-size: 20px;
-    font-weight: 500;
-    color: #3d3d3d;
-    letter-spacing: -0.01em;
+.mc-corners--circle {
+    border-radius: 50%;
 }
 
-.days-nav .day {
-    font-family: "Kievit", "Helvetica", "sans-serif";
-    color: rgba(0,0,0,0.5);
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    padding: 15px;
-    font-size: 15px;
-}
-.days-nav .day-dates {
-    opacity: 0.6;
+.mc-opacity--muted {
+    opacity: 0.6 !important;
 }
 
-.days-nav .day .mdi-chevron-up, .days-nav .day .mdi-chevron-down {
-    opacity: 0.4;
+.mc-text-d3, .mc-text-d2, .mc-text-d1, .mc-text-h1, .mc-text-h2, .mc-text-h3, .mc-text-h4, .mc-text-h5, .mc-text-h6, .mc-text-h7, .mc-text-h8 {
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
 }
 
-.days-nav .no-height {
-    height: 0px;
-    overflow-y: hidden;
-}
-
-.days-nav .exercises {
-    transition: all 0.3s ease;
-}
-
-.days-nav .section-title {
-    background: #f3f3f4;
-    border-bottom: none;
-    font-size: 15px;
-    color: rgba(0,0,0,0.45);
-    border-bottom: 1px solid #EAEAEA;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: 400;
-    padding: 8px 15px;
-}
-
-.days-nav .exercise.active {
-    color: rgba(0,0,0,0.9);
-    font-weight: 600;
-    background: white;
-}
-
-.days-nav .exercise.active {
-    color: rgba(0,0,0,0.9);
-    font-weight: 600;
-    background: white;
+.align-img {
+  margin-bottom: 16px;
+  padding-left: 131px;
+  margin-top: 32px;
 }
