@@ -1,8 +1,6 @@
 class SubjectsController < ApplicationController
   before_action :set_subject, only: [:show, :edit, :update, :destroy]
-
-  def home
-  end
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @subjects = Subject.all

@@ -8,4 +8,5 @@ class Subject < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :users, through: :bought_subjects
   has_many :courses, through: :course_subjects
+  has_one_attached :photo
 end
