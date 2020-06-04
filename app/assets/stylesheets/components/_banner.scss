@@ -12,7 +12,7 @@ body {
   flex: 1 0 auto;
 }
 .notice-streamer {
-  background-image: url(https://img-a.udemycdn.com/notices/home_banner/image/048e0cdc-3e71-47dc-ae30-e9ac7a3504b5.jpg);
+  background-image: url(soslogosite.png);
 }
 
 .notice-streamer {
@@ -147,10 +147,12 @@ p {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding-top: 32px;
+  background-color: floralwhite;
 }
 
 .half-left {
-  flex: 0 0 50%;
+  flex: 0 0 30%;
 }
 
 .half-bottom {
