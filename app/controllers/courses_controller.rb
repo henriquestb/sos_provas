@@ -6,7 +6,7 @@ class CoursesController < ApplicationController
   end
 
   def index
-    @courses = Course.all
+    @courses = policy_scope(Course).order(created_at: :desc)
   end
 
   def show
@@ -61,6 +61,7 @@ class CoursesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
   def set_course
     @course = Course.find(params[:id])
+    authorize @course
   end
   # Only allow a list of trusted parameters through.
   def course_params

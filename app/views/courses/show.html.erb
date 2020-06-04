@@ -7,7 +7,7 @@
     </div>
   </div>
 
-  <div>
+  <div class="course-banner">
     <%= cl_image_tag @course.photo.key, height: 600, width: 600 %>
   </div>
 </div>
@@ -16,10 +16,10 @@
   <div class="cards-subject">
     <div class="row">
       <% Subject.all.select{ |sub| sub.courses.include?(@course) }.each do |subject| %>
-        <div class="col-4">
+        <div class="col-sm-12 col-md-6 col-lg-4 my-3">
           <%= link_to course_subject_path(@course, subject), class: "link" do %>
             <div class="card-subject">
-              <%= cl_image_tag subject.photo.key, height: 190, width: 280 %>
+              <%= cl_image_tag subject.photo.key, height: 190, width: 280, crop: 'fill' %>
               <div class="card-subject-content ">
                 <div>
                   <h2><%= subject.name %></h2>
