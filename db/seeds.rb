@@ -87,6 +87,17 @@ CourseSubject.create!(course: medicina, subject: imunologia)
 
 #Contents
 limite = Content.create!(name: 'Limite', description: 'O ponto em que a derivada se iguala a 0.', subject: calculo1)
+rins = Content.create!(name: 'rins', description: 'Nessa aula angela vai nos ensinar e introduzir sobre um dos tópicos mais importantes de anatomia 1. Aprenda a metodologia do seu professor e como ele ira cobrar na prova, por fim angela corrigi os exercicios essencias para a prova.', subject: anatomia1)
+bexiga = Content.create!(name: 'bexiga', description: 'Nessa aula angela vai nos ensinar e introduzir sobre um dos tópicos mais importantes de anatomia 1. Aprenda a metodologia do seu professor e como ele ira cobrar na prova, por fim angela corrigi os exercicios essencias para a prova.', subject: anatomia1)
+uretra = Content.create!(name: 'uretra', description: 'Nessa aula angela vai nos ensinar e introduzir sobre um dos tópicos mais importantes de anatomia 1. Aprenda a metodologia do seu professor e como ele ira cobrar na prova, por fim angela corrigi os exercicios essencias para a prova.', subject: anatomia1)
+aparelho_genital_masculino = Content.create!(name: 'aperlho genital masculino', description: 'Nessa aula angela vai nos ensinar e introduzir sobre um dos tópicos mais importantes de anatomia 1. Aprenda a metodologia do seu professor e como ele ira cobrar na prova, por fim angela corrigi os exercicios essencias para a prova.', subject: anatomia1)
+aparelho_genital_feminino = Content.create!(name: 'aperlho genital feminino', description: 'Nessa aula angela vai nos ensinar e introduzir sobre um dos tópicos mais importantes de anatomia 1. Aprenda a metodologia do seu professor e como ele ira cobrar na prova, por fim angela corrigi os exercicios essencias para a prova.', subject: anatomia1)
+paredes_da_pelve = Content.create!(name: 'paredes da pelve', description: 'Nessa aula angela vai nos ensinar e introduzir sobre um dos tópicos mais importantes de anatomia 1. Aprenda a metodologia do seu professor e como ele ira cobrar na prova, por fim angela corrigi os exercicios essencias para a prova.', subject: anatomia1)
+assoalho_da_pelve = Content.create!(name: 'assoalho da pelve', description: 'Nessa aula angela vai nos ensinar e introduzir sobre um dos tópicos mais importantes de anatomia 1. Aprenda a metodologia do seu professor e como ele ira cobrar na prova, por fim angela corrigi os exercicios essencias para a prova.', subject: anatomia1)
+perineo = Content.create!(name: 'parineo', description: 'Nessa aula angela vai nos ensinar e introduzir sobre um dos tópicos mais importantes de anatomia 1. Aprenda a metodologia do seu professor e como ele ira cobrar na prova, por fim angela corrigi os exercicios essencias para a prova.', subject: anatomia1)
+biceps_superior = Content.create!(name: 'biceps superior', description: 'Nessa aula angela vai nos ensinar e introduzir sobre um dos tópicos mais importantes de anatomia 1. Aprenda a metodologia do seu professor e como ele ira cobrar na prova, por fim angela corrigi os exercicios essencias para a prova.', subject: anatomia1)
+biceps_inferior = Content.create!(name: 'biceps inferior', description: 'Nessa aula angela vai nos ensinar e introduzir sobre um dos tópicos mais importantes de anatomia 1. Aprenda a metodologia do seu professor e como ele ira cobrar na prova, por fim angela corrigi os exercicios essencias para a prova.', subject: anatomia1)
+
 
 engenharia.subjects << calculo1
 engenharia.save!
