@@ -25,6 +25,13 @@
   .half-left {
       flex: 0 0 50%;
   }
+  .search-form-control{
+    display: none;
+  }
+
+  .cart{
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
