@@ -53,7 +53,7 @@
     <div class="cards">
       <% @courses.each do |course| %>
         <%= link_to course_path(course), class: 'link' do %>
-          <div class="card-features">
+          <div class="card-features mx-auto">
             <%= course.icon.html_safe %>
             <div class="card-feature-title">
               <h2><strong>Aulas de <%= course.name %></strong></h2>
@@ -73,42 +73,43 @@
   <div class="testimonial-title">
     O que os nossos alunos tem a dizer
   </div>
+  <div class="container d-flex">
+    <div class="row row-testimonials">
 
-  <div class="row-testimonials">
-
-    <div class="card-testimonial col-3">
-      <div class="review">
-        <img alt="Paula" height="64" width="64" src="https://res.cloudinary.com/masterbi/image/upload/v1591141775/SOS-Provas/muiezinha_nchm7k.jpg">
-        <div>
-          Paula
+      <div class="card-testimonial col-sm-12 col-md-6 col-lg-3">
+        <div class="review">
+          <img alt="Paula" height="64" width="64" src="https://res.cloudinary.com/masterbi/image/upload/v1591141775/SOS-Provas/muiezinha_nchm7k.jpg">
+          <div>
+            Paula
+          </div>
+        </div>
+        <div class="testimonial-content">
+          SOS Provas salvou meus semestre. Estava perdida, desesperada e sem saber como estudar!
         </div>
       </div>
-      <div class="testimonial-content">
-        SOS Provas salvou meus semestre. Estava perdida, desesperada e sem saber como estudar!
-      </div>
-    </div>
 
-    <div class="card-testimonial col-3">
-      <div class="review">
-        <img alt="Lucas" height="64" width="64" src="https://i.udemycdn.com/user/100x100/22869844_edad.jpg">
-        <div>
-          Lucas
+      <div class="card-testimonial col-sm-12 col-md-6 col-lg-3">
+        <div class="review">
+          <img alt="Lucas" height="64" width="64" src="https://i.udemycdn.com/user/100x100/22869844_edad.jpg">
+          <div>
+            Lucas
+          </div>
+        </div>
+        <div class="testimonial-content">
+          Acredito no aprendizado de longo prazo, e o Sos Provas é uma ótima plataforma para aprender com especialistas. Aprendi muito e recomendo a todos os meus amigos.
         </div>
       </div>
-      <div class="testimonial-content">
-        Acredito no aprendizado de longo prazo, e o Sos Provas é uma ótima plataforma para aprender com especialistas. Aprendi muito e recomendo a todos os meus amigos.
-      </div>
-    </div>
 
-    <div class="card-testimonial col-3">
-      <div class="review">
-        <img alt="Vitor" height="64" width="64" src="https://i.udemycdn.com/user/100x100/31841220_f398_2.jpg">
-        <div>
-          Vitor
+      <div class="card-testimonial col-sm-12 col-md-6 col-lg-3">
+        <div class="review">
+          <img alt="Vitor" height="64" width="64" src="https://i.udemycdn.com/user/100x100/31841220_f398_2.jpg">
+          <div>
+            Vitor
+          </div>
         </div>
-      </div>
-      <div class="testimonial-content">
-        Obrigado, Sos Provas! Você renovou minha paixão pela engenharia, me ensinando de um jeito didatico, foi íncrivel.
+        <div class="testimonial-content">
+          Obrigado, Sos Provas! Você renovou minha paixão pela engenharia, me ensinando de um jeito didatico, foi íncrivel.
+        </div>
       </div>
     </div>
   </div>
