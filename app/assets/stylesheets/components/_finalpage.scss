@@ -1,13 +1,9 @@
 .sidenav {
-  height: 100%;
-  width: 200px;
   flex: 0 0 20%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #f3f3f3;
+  background-color: #f2f2f2;
   overflow-x: hidden;
-  padding-top: 20px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.1) inset;
+  border-right: 1px solid #e5e5e5;
 }
 
 .content {
@@ -18,8 +14,8 @@
 .sidenav a, .dropdown-btn {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 20px;
-  color: #818181;
+  font-size: 15px;
+  color: rgba(0,0,0,0.5);
   display: block;
   border: none;
   background: none;
@@ -78,4 +74,9 @@
   margin-bottom: 16px;
   padding-left: 131px;
   margin-top: 32px;
+}
+
+.sidenav-center {
+  display: flex;
+  justify-content: center;
 }

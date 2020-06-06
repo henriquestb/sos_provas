@@ -6,7 +6,10 @@ class SubjectsController < ApplicationController
     @subjects = Subject.all
   end
 
-  def show; end
+  def show
+    @first_class = @subject.contents.first
+    @course = @subject.courses.first #refatorar
+  end
 
   # GET /subjects/new
   def new
