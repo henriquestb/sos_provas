@@ -7,7 +7,7 @@ class SubjectsController < ApplicationController
   end
 
   def show
-    @first_class = @subject.contents.first
+    @content = @subject.contents.first
     @course = @subject.courses.first #refatorar
   end
 

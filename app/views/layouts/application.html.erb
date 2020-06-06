@@ -12,9 +12,59 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <%= yield %>
-    <%= render 'shared/footer' %>
+    <div class="page">
+      <%= yield %>
+      <%= render 'shared/footer' %>
+    </div>
+    <div class="disappear corrector">
+      <% Subject.all.each_with_index do |subject, index| %>
+        <%= link_to course_subject_path(subject.courses.first.id, subject) do %>
+        <div class="row margin-top-bottom-08 apply_filter mx-auto">
+          <div class="col-2 d-none d-sm-block">
+            <%= cl_image_tag subject.photo.key, class: 'mc-img-responsive' %>
+          </div>
+          <div class="col">
+            <h6 class="mc-text-h6 margin-bottom-04"><%= subject.name.capitalize %></h6>
+            <p class="mc-text-small opacity--hinted"> <%= subject.description %></p>
+          </div>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
 
     <%= javascript_pack_tag 'application' %>
+    <script>
+      window.html1 = document.querySelector(".page") || "";
+      window.html2 = html1.innerHTML;
+      window.list = window.document.querySelector(".disappear")
+      window.list2 = list.innerHTML;
+      function myFunction() {
+      // Declare variables
+      window.list.innerHTML = window.list2;
+      div = window.document.querySelectorAll(".apply_filter");
+      console.log(div);
+      var input, filter, div, i, item, txtValue;
+      window.html1.innerHTML = "";
+      input = document.getElementById("search_query");
+      filter = input.value.toUpperCase();
+        if (input.value === "") {
+          window.html1.innerHTML = window.html2
+          window.list.innerHTML = "";
+        }
+
+      for (i = 0; i < div.length; i++) {
+        item = div[i].getElementsByTagName('h6');
+        txtValue = item[0].textContent || item[0].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          div[i].style.display = "";
+        } else {
+          div[i].style.display = "none";
+          }
+        }
+      }
+      window.onload = function(){
+        window.list.innerHTML = "";
+      };
+    </script>
   </body>
 </html>
