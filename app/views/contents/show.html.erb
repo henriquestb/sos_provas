@@ -1,29 +1,79 @@
 <div class="sidenav-center">
   <div class="sidenav">
-    <% @all_classes.each do |cont| %>
-      <button class="dropdown-btn"><%= cont.name.capitalize %>
-        <i class="fa fa-caret-down fa-0,5x"></i>
+    <a class="subject-title" href="#"><%= @subject.name %></a>
+    <% @all_classes.each_with_index do |cont, index| %>
+      <button data-target="<%= index %>" class="dropdown-btn"><%= cont.name.capitalize %>
+        <i class="fa fa-caret-down"></i>
       </button>
-      <div class="dropdown-container">
-        <a href="#">Aula</a>
+      <div id="<%= index %>" class="dropdown-container">
+        <a href="#">Aulas</a>
         <a href="#">Exercicios</a>
-        <a href="#">Link 3</a>
+        <a href="#">Dúvidas</a>
       </div>
     <% end %>
   </div>
-  <div class="content">
-    <div class="row">
-      <div class="col-12 col-md-8 d-flex align-items-center align-img">
-        <div class="row margin-0 align-items-center margin-bottom-28">
-          <div class="col-auto"><img class="d-block mc-img-responsive flex-shrink-0 mc-corners--circle cdp__highlight-avatar" src="https://www.masterclass.com/course-images/images/3307/original/1570215115-AW_primary_1x1.jpg" alt="1570215115-AW_primary_1x1"></div>
-            <div class="col mc-ml-4">
-              <h6 class="mc-text-h4">Angela Patrus</h6>
-              <p class="mc-opacity--muted margin-bottom-04">Ensina a arte da anatomia</p>
-            </div>
-          </div>
+  <div class="content video-center">
+    <div class="lecture-container">
+      <ul class="list-inline tabs-underlined">
+        <li>
+          <a  data-target="lecture" class="tab-underlined active">Aulas</a>
+        </li>
+        <li>
+          <a  data-target="exercises" class="tab-underlined">Exercicios</a>
+        </li>
+        <li>
+          <a  data-target="slide" class="tab-underlined">Slides</a>
+        </li>
+      </ul>
+      <div class="tabs">
+        <div id="lecture" class="tabinho tab-active">
+          <%= get_vimeo_iframe(8802771) %>
+        </div>
+        <div id="exercises" class="tabinho">
+          <%= get_vimeo_iframe(8802771) %>
+        </div>
+        <div id="slide" class="tabinho">
+          <%= get_vimeo_iframe(8802771) %>
         </div>
       </div>
-      <%= get_vimeo_iframe(8802771,940,420) %>
     </div>
 </div>
+
+
+
+<script>
+  const links = document.querySelectorAll(".tab-underlined")
+  links.forEach((link) => {
+    link.addEventListener("click", function(){
+      const active = document.querySelector(".tab-active")
+      active.classList.remove('tab-active')
+      const paint = document.querySelector(".active")
+      paint.classList.remove('active')
+      const idSelected = link.dataset.target
+      const selected = document.getElementById(idSelected)
+      selected.classList.add('tab-active');
+      link.classList.add('active')
+    });
+  });
+  // const dropdowns = document.querySelectorAll(".dropdown-btn")
+  // const dropdownsContainers = document.querySelectorAll(".dropdown-containerrr")
+  // dropdowns.forEach((drop) => {
+  //   drop.addEventListener("click", function(){
+  //     dropdowns.forEach((close) => {
+  //       close.classList.remove('active')
+  //     });
+  //     dropdownsContainers.forEach((dropcont) => {
+  //       dropcont.style.display = 'none'
+  //     });
+  //     const clickedId = drop.dataset.target
+  //     const clicked = document.getElementById(clickedId)
+  //     console.log(clicked)
+  //     drop.classList.add('active')
+  //     clicked.style.display = 'block'
+  //   });
+  // });
+</script>
+
+
+
 
