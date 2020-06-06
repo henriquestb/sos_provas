@@ -1,30 +1,29 @@
 <div class="sidenav-center">
-    <div class="sidenav">
-      <% @all_classes.each do |cont| %>
-        <button class="dropdown-btn"><%= cont.name.capitalize %>
-          <i class="fa fa-caret-down fa-0,5x"></i>
-        </button>
-        <div class="dropdown-container">
-          <a href="#">Aula</a>
-          <a href="#">Exercicios</a>
-          <a href="#">Link 3</a>
-        </div>
-      <% end %>
-    </div>
+  <div class="sidenav">
+    <% @all_classes.each do |cont| %>
+      <button class="dropdown-btn"><%= cont.name.capitalize %>
+        <i class="fa fa-caret-down fa-0,5x"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#">Aula</a>
+        <a href="#">Exercicios</a>
+        <a href="#">Link 3</a>
+      </div>
+    <% end %>
+  </div>
   <div class="content">
     <div class="row">
       <div class="col-12 col-md-8 d-flex align-items-center align-img">
         <div class="row margin-0 align-items-center margin-bottom-28">
-              <div class="col-auto"><img class="d-block mc-img-responsive flex-shrink-0 mc-corners--circle cdp__highlight-avatar" src="https://www.masterclass.com/course-images/images/3307/original/1570215115-AW_primary_1x1.jpg" alt="1570215115-AW_primary_1x1"></div>
-              <div class="col mc-ml-4">
-                <h6 class="mc-text-h4">Angela Patrus</h6>
-                <p class="mc-opacity--muted margin-bottom-04">Ensina a arte da anatomia</p>
-              </div>
+          <div class="col-auto"><img class="d-block mc-img-responsive flex-shrink-0 mc-corners--circle cdp__highlight-avatar" src="https://www.masterclass.com/course-images/images/3307/original/1570215115-AW_primary_1x1.jpg" alt="1570215115-AW_primary_1x1"></div>
+            <div class="col mc-ml-4">
+              <h6 class="mc-text-h4">Angela Patrus</h6>
+              <p class="mc-opacity--muted margin-bottom-04">Ensina a arte da anatomia</p>
             </div>
+          </div>
         </div>
       </div>
       <%= get_vimeo_iframe(8802771,940,420) %>
     </div>
-  </div>
 </div>
 

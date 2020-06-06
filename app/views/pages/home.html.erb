@@ -53,7 +53,7 @@
     <div class="cards">
       <% @courses.each do |course| %>
         <%= link_to course_path(course), class: 'link' do %>
-          <div class="card-features mx-auto">
+          <div class="card-features">
             <%= course.icon.html_safe %>
             <div class="card-feature-title">
               <h2><strong>Aulas de <%= course.name %></strong></h2>
