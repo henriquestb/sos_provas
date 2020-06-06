@@ -1,270 +1,80 @@
-<div id="days-nav">
-  <div class="days-nav" data-controller="days-nav">
-    <a class="module-header" href="/camps/356/challenges?path=01-Ruby">
-    <div class="module-header-name">
-      <div class="module-icon-container">
-        <svg viewbox="0 0 194 193" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <g id="ruby" transform="translate(-3.000000, -6.000000)" fill="#B40A00">
-            <g id="Page-1">
-              <path d="M11.3454545,105.036364 C12.5454545,101.281818 13.9727273,93.6272727 17.3,86.9 C33.4909091,54.2272727 58.5363636,30.4636364 91.9818182,16.0272727 C98.4363636,13.2454545 106.118182,12.3545455 113.245455,12.3181818 C122.154545,12.2727273 128.127273,18.4727273 128.909091,27.4636364 C129.318182,32.1454545 129.263636,37.3454545 127.654545,41.6545455 C111.809091,84.0363636 81.9090909,112.418182 39.8727273,128.363636 C38.2363636,128.981818 36.4090909,129.145455 34.6454545,129.381818 C20.3363636,131.345455 11.1272727,123.236364 11.3454545,105.036364 L11.3454545,105.036364 L11.3454545,105.036364 Z M121.354545,73.6272727 C144.590909,72 167.436364,70.4 191.372727,68.7181818 C189.627273,67.0545455 188.645455,65.9636364 187.509091,65.0545455 C166.672727,48.3454545 145.781818,31.7090909 125.027273,14.9 C122.972727,13.2363636 121.7,10.6181818 118.954545,6.98181818 C127.872727,6.98181818 135.081818,6.9 142.290909,7 C150.990909,7.12727273 159.9,6.28181818 168.354545,7.84545455 C186.636364,11.2272727 196.390909,23.0181818 196.045455,41.6 C195.727273,59.0181818 193.927273,76.4090909 192.636364,93.8 C190.663636,120.427273 188.590909,147.054545 186.536364,173.672727 C186.181818,178.263636 185.754545,182.854545 185.290909,188.309091 C175.627273,179.7 166.381818,171.472727 157.154545,163.236364 C155.963636,162.172727 154.972727,160.8 153.654545,159.954545 C142.372727,152.772727 137.663636,142.063636 135.1,129.263636 C131.754545,112.536364 126.854545,96.1181818 122.636364,79.5636364 C122.163636,77.7090909 121.818182,75.8181818 121.345455,73.6090909 L121.354545,73.6272727 L121.354545,73.6272727 Z M34.2272727,175.463636 C39.2,174.772727 43.8545455,174.481818 48.2909091,173.336364 C50.0363636,172.890909 52.0636364,170.763636 52.6272727,168.981818 C56.8090909,155.754545 60.6454545,142.409091 64.6,129.118182 C64.9454545,127.954545 65.4272727,126.827273 66.0636364,125.090909 C90.2636364,132.836364 114.272727,140.527273 138.990909,148.436364 C126.127273,161.418182 112.445455,172.3 97.1545455,182.081818 C124.4,184.163636 151.645455,186.245455 178.890909,188.327273 C178.890909,188.672727 178.890909,189.027273 178.9,189.372727 C173.027273,189.790909 167.154545,190.227273 161.281818,190.618182 C126.627273,192.9 91.9818182,195.172727 57.3272727,197.436364 C51.8181818,197.8 46.3,198.4 40.8,198.3 C17.4727273,197.872727 4.25454545,185.090909 3.95454545,161.690909 C3.78181818,148.545455 5.13636364,135.381818 5.97272727,122.236364 C6.03636364,121.245455 7.45454545,120.336364 8.24545455,119.390909 C9.41818182,120.436364 11.1272727,121.254545 11.7,122.563636 C18.6636364,138.709091 25.4636364,154.927273 32.3090909,171.118182 C32.8636364,172.418182 33.4545455,173.7 34.2272727,175.463636 L34.2272727,175.463636 L34.2272727,175.463636 Z" id="Shape"></path>
-            </g>
-          </g>
-        </g></svg>
-      </div><span>Ruby</span>
-    </div></a>
-    <div class="days">
-      <div class="day" data-target="days-nav.day" data-action="click-&gt;days-nav#toggleDay">
-        <div>
-          Programming Basics
-          <div class="day-dates">
-            January 14th & January 16th
+<div class="content py-5  bg-secondary">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <span class="anchor" id="formPayment"></span>
+        <hr class="my-5">
+
+        <!-- form card cc payment -->
+        <div class="card">
+          <div class="card-body">
+            <h3 class="text-center">Credit Card Payment</h3>
+            <hr>
+            <form class="form" role="form" autocomplete="off">
+              <div class="form-group">
+                <label for="cc_name">Nome no Cartão</label>
+                <input type="text" class="form-control" id="cc_name" pattern="\w+ \w+.*" title="First and last name" required="required">
+              </div>
+              <div class="form-group">
+                <label>Número do Cartão</label>
+                <input type="text" class="form-control" autocomplete="off" maxlength="20" pattern="\d{16}" title="Credit card number" required="">
+              </div>
+              <div class="form-group row">
+                <label class="col-md-12">Data que expira</label>
+                <div class="col-md-4">
+                  <select class="form-control" name="cc_exp_mo" size="0">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <select class="form-control" name="cc_exp_yr" size="0">
+                    <option>2018</option>
+                    <option>2019</option>
+                    <option>2020</option>
+                    <option>2021</option>
+                    <option>2022</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <input type="text" class="form-control" autocomplete="off" maxlength="3" pattern="\d{3}" title="Three digits at back of your card" required="" placeholder="CVC">
+                </div>
+              </div>
+
+              <div class="row">
+                  <label class="col-md-12">Valor</label>
+              </div>
+
+              <div class="form-inline">
+                <div class="input-group">
+                  <div class="input-group-prepend"><span class="input-group-text">R$</span></div>
+                  <input type="text" class="form-control text-right" id="exampleInputAmount" placeholder="129">
+                  <div class="input-group-append"><span class="input-group-text">.00</span></div>
+                </div>
+              </div>
+              <hr>
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <button type="reset" class="btn btn-default btn-lg btn-block">Cancelar</button>
+                </div>
+                <div class="col-md-6">
+                  <button type="submit" class="btn btn-success btn-lg btn-block">Comprar</button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
-      </div>
-      <div class="exercises no-height" id="exercises_2">
-        <div class="section-title">
-          <h3>Challenges</h3>
-        </div>
-        <div id="nav-exercise-01-Ruby-01-Programming-basics-01-Buddy" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/01-Programming-basics/01-Buddy">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise active" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F01-Programming-basics%2F01-Buddy"><span class="index">1 -</span> <span class="title">Who’s your buddy?</span> <span class="rake"><span>3/3</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-01-Programming-basics-02-Experiment-methods" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/01-Programming-basics/02-Experiment-methods">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F01-Programming-basics%2F02-Experiment-methods"><span class="index">2 -</span> <span class="title">Experiment Methods</span> <span class="rake"><span>13/13</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-01-Programming-basics-03-Age-in-days" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/01-Programming-basics/03-Age-in-days">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F01-Programming-basics%2F03-Age-in-days"><span class="index">3 -</span> <span class="title">Age in Days</span> <span class="rake"><span>3/3</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-01-Programming-basics-04-What-your-name" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/01-Programming-basics/04-What-your-name">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F01-Programming-basics%2F04-What-your-name"><span class="index">4 -</span> <span class="title">What is your Name</span> <span class="rake"><span>3/3</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-01-Programming-basics-05-Stupid-coaching" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/01-Programming-basics/05-Stupid-coaching">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F01-Programming-basics%2F05-Stupid-coaching"><span class="index">5 -</span> <span class="title">Stupid Coaching</span> <span class="rake"><span>11/11</span></span></a>
-        </div><a class="exercise nav-flashcards" data-target="days-nav.exercise" data-action="days-nav#toggleExercise" data-remote="true" href="/camps/356/challenges?feature=flashcards&amp;path=01-Ruby%2F01-Programming-basics"><span class="index">6 -</span> <span>Flashcards</span> <span class="rake"><span>2 cards left</span></span></a>
-        <div id="nav-exercise-01-Ruby-01-Programming-basics-Optional-01-Colorful-Algorithm" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/01-Programming-basics/Optional-01-Colorful-Algorithm">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F01-Programming-basics%2FOptional-01-Colorful-Algorithm"><span class="title optional">Colourful Algorithm</span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-01-Programming-basics-Optional-02-Ip-Address-Converter" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/01-Programming-basics/Optional-02-Ip-Address-Converter">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F01-Programming-basics%2FOptional-02-Ip-Address-Converter"><span class="title optional">IP Address Converter</span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-01-Programming-basics-Optional-03-Credit-Card-Checker" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/01-Programming-basics/Optional-03-Credit-Card-Checker">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F01-Programming-basics%2FOptional-03-Credit-Card-Checker"><span class="title optional">Credit Card Checker</span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-01-Programming-basics-Optional-04-Morse-Code" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/01-Programming-basics/Optional-04-Morse-Code">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F01-Programming-basics%2FOptional-04-Morse-Code"><span class="title optional">Morse Code</span></a>
-        </div>
-        <div class="section-title">
-          <h3>Resources</h3>
-        </div><a class="exercise asset" data-action="ajax:success-&gt;ajax-form#onPostSuccess days-nav#toggleExercise" data-target="days-nav.exercise" data-remote="true" href="/camps/356/lectures/01-Ruby%2F01-Programming-basics"><span class="day-lecture-name"><span>Lecture</span></span></a>
-      </div>
-      <div class="day" data-target="days-nav.day" data-action="click-&gt;days-nav#toggleDay">
-        <div>
-          Flow, Conditionals & Arrays
-          <div class="day-dates">
-            January 18th
-          </div>
-        </div>
-      </div>
-      <div class="no-height exercises" id="exercises_3">
-        <div class="section-title">
-          <h3>Challenges</h3>
-        </div>
-        <div id="nav-exercise-01-Ruby-02-Flow-Array-01-Can-you-vote" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/02-Flow-Array/01-Can-you-vote">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F02-Flow-Array%2F01-Can-you-vote"><span class="index">1 -</span> <span class="title">Can you vote?</span> <span class="rake"><span>2/2</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-02-Flow-Array-02-Simple-looping" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/02-Flow-Array/02-Simple-looping">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F02-Flow-Array%2F02-Simple-looping"><span class="index">2 -</span> <span class="title">Simple Looping</span> <span class="rake"><span>5/5</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-02-Flow-Array-03-Sorting-the-wagon" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/02-Flow-Array/03-Sorting-the-wagon">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F02-Flow-Array%2F03-Sorting-the-wagon"><span class="index">3 -</span> <span class="title">Sorting the Wagon</span> <span class="rake"><span>5/5</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-02-Flow-Array-04-Black-Jack" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/02-Flow-Array/04-Black-Jack">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F02-Flow-Array%2F04-Black-Jack"><span class="index">4 -</span> <span class="title">Black Jack</span> <span class="rake"><span>12/12</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-02-Flow-Array-05-Debug-Gym" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/02-Flow-Array/05-Debug-Gym">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F02-Flow-Array%2F05-Debug-Gym"><span class="index">5 -</span> <span class="title">Debug Gym</span> <span class="rake"><span>1/1</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-02-Flow-Array-06-Destructive-Methods" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/02-Flow-Array/06-Destructive-Methods">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F02-Flow-Array%2F06-Destructive-Methods"><span class="index">6 -</span> <span class="title">Destructive Methods</span> <span class="rake"><span>2/2</span></span></a>
-        </div><a class="exercise nav-flashcards" data-target="days-nav.exercise" data-action="days-nav#toggleExercise" data-remote="true" href="/camps/356/challenges?feature=flashcards&amp;path=01-Ruby%2F02-Flow-Array"><span class="index">7 -</span> <span>Flashcards</span> <span class="rake"><span>20 cards left</span></span></a>
-        <div id="nav-exercise-01-Ruby-02-Flow-Array-Optional-01-Roman-numerals" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/02-Flow-Array/Optional-01-Roman-numerals">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F02-Flow-Array%2FOptional-01-Roman-numerals"><span class="title optional">Roman Numerals</span> <span class="rake"><span>14/14</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-02-Flow-Array-Optional-02-Shuffle" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/02-Flow-Array/Optional-02-Shuffle">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F02-Flow-Array%2FOptional-02-Shuffle"><span class="title optional">Shuffle</span> <span class="rake"><span>2/2</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-02-Flow-Array-Optional-03-Beer-song" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/02-Flow-Array/Optional-03-Beer-song">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F02-Flow-Array%2FOptional-03-Beer-song"><span class="title optional">Beer Song</span> <span class="rake"><span>0/2</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-02-Flow-Array-Optional-04-Fizz-Buzz" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/02-Flow-Array/Optional-04-Fizz-Buzz">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F02-Flow-Array%2FOptional-04-Fizz-Buzz"><span class="title optional">Fizz Buzz</span> <span class="rake"><span>5/5</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-02-Flow-Array-Optional-05-Simple-Looping-With-Recursion" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/02-Flow-Array/Optional-05-Simple-Looping-With-Recursion">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F02-Flow-Array%2FOptional-05-Simple-Looping-With-Recursion"><span class="title optional">Recursion</span></a>
-        </div>
-        <div class="section-title">
-          <h3>Resources</h3>
-        </div><a class="exercise asset" data-action="ajax:success-&gt;ajax-form#onPostSuccess days-nav#toggleExercise" data-target="days-nav.exercise" data-remote="true" href="/camps/356/lectures/01-Ruby%2F02-Flow-Array"><span class="day-lecture-name"><span>Lecture</span></span></a>
-      </div>
-      <div class="day" data-target="days-nav.day" data-action="click-&gt;days-nav#toggleDay">
-        <div>
-          Iterators & Blocks
-          <div class="day-dates">
-            January 21st & January 23rd
-          </div>
-        </div>
-      </div>
-      <div class="no-height exercises" id="exercises_4">
-        <div class="section-title">
-          <h3>Challenges</h3>
-        </div>
-        <div id="nav-exercise-01-Ruby-03-Iterators-Blocks-01-How-many-team-members" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/03-Iterators-Blocks/01-How-many-team-members">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F03-Iterators-Blocks%2F01-How-many-team-members"><span class="index">1 -</span> <span class="title">Team Members</span> <span class="rake"><span>1/1</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-03-Iterators-Blocks-02-Enumerable" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/03-Iterators-Blocks/02-Enumerable">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F03-Iterators-Blocks%2F02-Enumerable"><span class="index">2 -</span> <span class="title">Enumerable Methods</span> <span class="rake"><span>7/7</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-03-Iterators-Blocks-03-About-blocks" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/03-Iterators-Blocks/03-About-blocks">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F03-Iterators-Blocks%2F03-About-blocks"><span class="index">3 -</span> <span class="title">About Blocks</span> <span class="rake"><span>7/7</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-03-Iterators-Blocks-04-Splitter" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/03-Iterators-Blocks/04-Splitter">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F03-Iterators-Blocks%2F04-Splitter"><span class="index">4 -</span> <span class="title">Splitter</span> <span class="rake"><span>10/10</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-03-Iterators-Blocks-05-Cleaning-your-mess" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/03-Iterators-Blocks/05-Cleaning-your-mess">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F03-Iterators-Blocks%2F05-Cleaning-your-mess"><span class="index">5 -</span> <span class="title">Cleaning your Mess</span> <span class="rake"><span>1/1</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-03-Iterators-Blocks-06-Louchebem" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/03-Iterators-Blocks/06-Louchebem">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F03-Iterators-Blocks%2F06-Louchebem"><span class="index">6 -</span> <span class="title">Louchebem</span> <span class="rake"><span>6/6</span></span></a>
-        </div><a class="exercise nav-flashcards" data-target="days-nav.exercise" data-action="days-nav#toggleExercise" data-remote="true" href="/camps/356/challenges?feature=flashcards&amp;path=01-Ruby%2F03-Iterators-Blocks"><span class="index">7 -</span> <span>Flashcards</span> <span class="rake"><span>21 cards left</span></span></a>
-        <div id="nav-exercise-01-Ruby-03-Iterators-Blocks-Optional-01-Playing-with-strings" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/03-Iterators-Blocks/Optional-01-Playing-with-strings">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F03-Iterators-Blocks%2FOptional-01-Playing-with-strings"><span class="title optional">Playing with Strings</span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-03-Iterators-Blocks-Optional-02-Storing-blocks-in-Proc" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/03-Iterators-Blocks/Optional-02-Storing-blocks-in-Proc">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F03-Iterators-Blocks%2FOptional-02-Storing-blocks-in-Proc"><span class="title optional">Storing Blocks in Procs</span></a>
-        </div>
-        <div class="section-title">
-          <h3>Resources</h3>
-        </div><a class="exercise asset" data-action="ajax:success-&gt;ajax-form#onPostSuccess days-nav#toggleExercise" data-target="days-nav.exercise" data-remote="true" href="/camps/356/lectures/01-Ruby%2F03-Iterators-Blocks"><span class="day-lecture-name"><span>Lecture</span></span></a>
-      </div>
-      <div class="day" data-target="days-nav.day" data-action="click-&gt;days-nav#toggleDay">
-        <div>
-          Hash & Symbols
-          <div class="day-dates">
-            January 25th
-          </div>
-        </div>
-      </div>
-      <div class="no-height exercises" id="exercises_5">
-        <div class="section-title">
-          <h3>Challenges</h3>
-        </div>
-        <div id="nav-exercise-01-Ruby-04-Hash-Symbols-01-Modeling-with-Hash" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/04-Hash-Symbols/01-Modeling-with-Hash">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F04-Hash-Symbols%2F01-Modeling-with-Hash"><span class="index">1 -</span> <span class="title">Burger Hash</span> <span class="rake"><span>2/2</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-04-Hash-Symbols-02-Modeling-with-Hash-part-II" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/04-Hash-Symbols/02-Modeling-with-Hash-part-II">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F04-Hash-Symbols%2F02-Modeling-with-Hash-part-II"><span class="index">2 -</span> <span class="title">Burger Hash (Part II)</span> <span class="rake"><span>2/2</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-04-Hash-Symbols-03-On-symbols" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/04-Hash-Symbols/03-On-symbols">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F04-Hash-Symbols%2F03-On-symbols"><span class="index">3 -</span> <span class="title">Quiz on Symbols</span> <span class="rake"><span>6/6</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-04-Hash-Symbols-04-Argument-order-dependency" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/04-Hash-Symbols/04-Argument-order-dependency">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F04-Hash-Symbols%2F04-Argument-order-dependency"><span class="index">4 -</span> <span class="title">Argument Order Dependency</span> <span class="rake"><span>2/2</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-04-Hash-Symbols-05-Array-to-hash" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/04-Hash-Symbols/05-Array-to-hash">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F04-Hash-Symbols%2F05-Array-to-hash"><span class="index">5 -</span> <span class="title">Array to Hash</span> <span class="rake"><span>2/2</span></span></a>
-        </div><a class="exercise nav-flashcards" data-target="days-nav.exercise" data-action="days-nav#toggleExercise" data-remote="true" href="/camps/356/challenges?feature=flashcards&amp;path=01-Ruby%2F04-Hash-Symbols"><span class="index">6 -</span> <span>Flashcards</span> <span class="rake"><span>All done!</span></span></a>
-        <div id="nav-exercise-01-Ruby-04-Hash-Symbols-Optional-01-Roman-to-integer" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/04-Hash-Symbols/Optional-01-Roman-to-integer">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F04-Hash-Symbols%2FOptional-01-Roman-to-integer"><span class="title optional">Roman to Integer</span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-04-Hash-Symbols-Optional-02-Combine-anagrams" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/04-Hash-Symbols/Optional-02-Combine-anagrams">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F04-Hash-Symbols%2FOptional-02-Combine-anagrams"><span class="title optional">Combine Anagrams</span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-04-Hash-Symbols-Optional-03-Shopping-Cart" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/04-Hash-Symbols/Optional-03-Shopping-Cart">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F04-Hash-Symbols%2FOptional-03-Shopping-Cart"><span class="title optional">Shopping Cart</span></a>
-        </div>
-        <div class="section-title">
-          <h3>Resources</h3>
-        </div><a class="exercise asset" data-action="ajax:success-&gt;ajax-form#onPostSuccess days-nav#toggleExercise" data-target="days-nav.exercise" data-remote="true" href="/camps/356/lectures/01-Ruby%2F04-Hash-Symbols"><span class="day-lecture-name"><span>Lecture</span></span></a>
-      </div>
-      <div class="day" data-target="days-nav.day" data-action="click-&gt;days-nav#toggleDay">
-        <div>
-          Regular Expressions
-          <div class="day-dates">
-            January 28th & January 30th
-          </div>
-        </div>
-      </div>
-      <div class="no-height exercises" id="exercises_6">
-        <div class="section-title">
-          <h3>Challenges</h3>
-        </div>
-        <div id="nav-exercise-01-Ruby-05-Regular-Expressions-01-Phone-regexp" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/05-Regular-Expressions/01-Phone-regexp">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F05-Regular-Expressions%2F01-Phone-regexp"><span class="index">1 -</span> <span class="title">Phone Regexp</span> <span class="rake"><span>9/9</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-05-Regular-Expressions-02-Anagrams" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/05-Regular-Expressions/02-Anagrams">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F05-Regular-Expressions%2F02-Anagrams"><span class="index">2 -</span> <span class="title">Anagrams</span> <span class="rake"><span>6/6</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-05-Regular-Expressions-03-Mail-spotter" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/05-Regular-Expressions/03-Mail-spotter">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F05-Regular-Expressions%2F03-Mail-spotter"><span class="index">3 -</span> <span class="title">Mail Spotter</span> <span class="rake"><span>5/5</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-05-Regular-Expressions-04-Word-frequency" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/05-Regular-Expressions/04-Word-frequency">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F05-Regular-Expressions%2F04-Word-frequency"><span class="index">4 -</span> <span class="title">Word Frequency</span> <span class="rake"><span>2/2</span></span></a>
-        </div><a class="exercise nav-flashcards" data-target="days-nav.exercise" data-action="days-nav#toggleExercise" data-remote="true" href="/camps/356/challenges?feature=flashcards&amp;path=01-Ruby%2F05-Regular-Expressions"><span class="index">5 -</span> <span>Flashcards</span> <span class="rake"><span>20 cards left</span></span></a>
-        <div id="nav-exercise-01-Ruby-05-Regular-Expressions-Optional-01-Provider-grouping" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/05-Regular-Expressions/Optional-01-Provider-grouping">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F05-Regular-Expressions%2FOptional-01-Provider-grouping"><span class="title optional">Provider Grouping</span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-05-Regular-Expressions-Optional-02-A-translation-story" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/05-Regular-Expressions/Optional-02-A-translation-story">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F05-Regular-Expressions%2FOptional-02-A-translation-story"><span class="title optional">A Translation Story</span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-05-Regular-Expressions-Optional-03-Regex-Games" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/05-Regular-Expressions/Optional-03-Regex-Games">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F05-Regular-Expressions%2FOptional-03-Regex-Games"><span class="title optional">Regex Games</span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-05-Regular-Expressions-Reboot-01-Calculator" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/05-Regular-Expressions/Reboot-01-Calculator">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F05-Regular-Expressions%2FReboot-01-Calculator"><span class="title reboot">Calculator</span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-05-Regular-Expressions-Reboot-02-Horse-race" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/05-Regular-Expressions/Reboot-02-Horse-race">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F05-Regular-Expressions%2FReboot-02-Horse-race"><span class="title reboot">Horse Race</span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-05-Regular-Expressions-Reboot-03-Instacart" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/05-Regular-Expressions/Reboot-03-Instacart">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F05-Regular-Expressions%2FReboot-03-Instacart"><span class="title reboot">Instacart</span></a>
-        </div>
-        <div class="section-title">
-          <h3>Resources</h3>
-        </div><a class="exercise asset" data-action="ajax:success-&gt;ajax-form#onPostSuccess days-nav#toggleExercise" data-target="days-nav.exercise" data-remote="true" href="/camps/356/lectures/01-Ruby%2F05-Regular-Expressions"><span class="day-lecture-name"><span>Lecture</span></span></a>
-      </div>
-      <div class="day" data-target="days-nav.day" data-action="click-&gt;days-nav#toggleDay">
-        <div>
-          Parsing
-          <div class="day-dates">
-            February 1st
-          </div>
-        </div>
-      </div>
-      <div class="no-height exercises" id="exercises_7">
-        <div class="section-title">
-          <h3>Challenges</h3>
-        </div>
-        <div id="nav-exercise-01-Ruby-06-Parsing-01-CSV-Parsing" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/06-Parsing/01-CSV-Parsing">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F06-Parsing%2F01-CSV-Parsing"><span class="index">1 -</span> <span class="title">CSV Parsing</span> <span class="rake"><span>6/6</span></span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-06-Parsing-02-Numbers-and-Letters" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/06-Parsing/02-Numbers-and-Letters">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F06-Parsing%2F02-Numbers-and-Letters"><span class="index">2 -</span> <span class="title">Numbers and Letters</span> <span class="rake"><span>12/12</span></span></a>
-        </div><a class="exercise nav-flashcards" data-target="days-nav.exercise" data-action="days-nav#toggleExercise" data-remote="true" href="/camps/356/challenges?feature=flashcards&amp;path=01-Ruby%2F06-Parsing"><span class="index">3 -</span> <span>Flashcards</span> <span class="rake"><span>21 cards left</span></span></a>
-        <div id="nav-exercise-01-Ruby-06-Parsing-Optional-01-Text-Analyzer" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/06-Parsing/Optional-01-Text-Analyzer">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F06-Parsing%2FOptional-01-Text-Analyzer"><span class="title optional">Text Analyser</span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-06-Parsing-Optional-02-Your-First-Scraper" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/06-Parsing/Optional-02-Your-First-Scraper">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F06-Parsing%2FOptional-02-Your-First-Scraper"><span class="title optional">Your First Scraper</span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-06-Parsing-Optional-03-Time-complexity" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/06-Parsing/Optional-03-Time-complexity">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F06-Parsing%2FOptional-03-Time-complexity"><span class="title optional">Time Complexity</span></a>
-        </div>
-        <div id="nav-exercise-01-Ruby-06-Parsing-Reboot-01-Christmas-list" data-target="exercise-results-cable.navbar" data-exercise-results-cable-exercise-path="01-Ruby/06-Parsing/Reboot-01-Christmas-list">
-          <a data-target="days-nav.exercise" data-action="days-nav#toggleExercise" class="exercise" data-remote="true" href="/camps/356/challenges?path=01-Ruby%2F06-Parsing%2FReboot-01-Christmas-list"><span class="title reboot">Christmas List</span></a>
-        </div>
-        <div class="section-title">
-          <h3>Resources</h3>
-        </div><a class="exercise asset" data-action="ajax:success-&gt;ajax-form#onPostSuccess days-nav#toggleExercise" data-target="days-nav.exercise" data-remote="true" href="/camps/356/lectures/01-Ruby%2F06-Parsing"><span class="day-lecture-name"><span>Lecture</span></span></a>
+        <!-- /form card cc payment -->
       </div>
     </div>
   </div>

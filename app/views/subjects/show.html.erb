@@ -1,15 +1,18 @@
 <div class="container corrector">
   <div class="row">
     <div class="col-12 col-md-8">
-      <div class="cdp__highlight-box mc-p-8">
-        <h3 class="mc-text-h3 mc-mb-2"><%= @subject.name %></h3>
+      <div class="cdp__highlight-box padding-32">
+        <h3 class="mc-text-h3 margin-bottom-08"><%= @subject.name %></h3>
         <!-- <p class="opacity--hinted">Cada aula, contem um exercicio para você.</p> -->
-        <div class="mc-my-6"><img class="mc-img-responsive" src="https://images.unsplash.com/photo-1557425955-df376b5903c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="1570652274-AW_cinematic_12x5"></div><a href="/classes/alice-waters-teaches-the-art-of-home-cooking/chapters/the-art-of-simple-food">
+        <div class="margin-top-bottom-24">
+          <img class="mc-img-responsive" src="https://images.unsplash.com/photo-1557425955-df376b5903c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="1570652274-AW_cinematic_12x5">
+        </div>
+        <a href="/classes/alice-waters-teaches-the-art-of-home-cooking/chapters/the-art-of-simple-food">
         <% @subject.contents.each_with_index do |cont, index| %>
-          <div class="row mc-my-2">
+          <div class="row margin-top-bottom-08">
             <div class="col-2 d-none d-sm-block"><img class="mc-img-responsive" src="https://images.unsplash.com/photo-1573166826272-5acd0ef8f650?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" ></div>
             <div class="col">
-              <h6 class="mc-text-h6 mc-mb-1"> <%= index + 1 %>. <%= cont.name.capitalize %></h6>
+              <h6 class="mc-text-h6 margin-bottom-04"> <%= index + 1 %>. <%= cont.name.capitalize %></h6>
               <p class="mc-text-small opacity--hinted"> <%= cont.description %></p>
             </div>
           </div>
@@ -17,27 +20,27 @@
       </div>
     </div>
     <div class="col-12 col-md-4">
-      <div class="cdp__highlight-box mc-p-8 mc pb-7">
-        <div class="row no-gutters align-items-center mc-mb-7">
-          <div class="col-auto"><img class="d-block mc-img-responsive flex-shrink-0 mc-corners--circle cdp__highlight-avatar" src="https://www.masterclass.com/course-images/images/3307/original/1570215115-AW_primary_1x1.jpg" alt="1570215115-AW_primary_1x1"></div>
+      <div class="cdp__highlight-box padding-32">
+        <div class="row margin-0 align-items-center margin-bottom-28">
+          <div class="col-auto">
+            <img class="d-block mc-img-responsive flex-shrink-0 mc-corners--circle cdp__highlight-avatar" src="https://www.masterclass.com/course-images/images/3307/original/1570215115-AW_primary_1x1.jpg" alt="1570215115-AW_primary_1x1">
+          </div>
           <div class="col mc-ml-4">
-            <h6 class="mc-text-h6 mc-mb-1">Angela Patrus</h6>
+            <h6 class="mc-text-h6 margin-bottom-04">Angela Patrus</h6>
             <p class="mc-text-small">Ensina a arte da anatomia</p>
           </div>
         </div>
         <p class="opacity--hinted">Angela Patrus é uma acadêmica de medicina da Faculdade Ciências Médicas de Minas Gerais.</p>
-        <div class="separator mc-mt-8 mc-mb-6"></div>
+        <div class="separator mc-mt-8 margin-bottom-24"></div>
         <div class="cdp__sidebar-cta mc-text--center">
           <p class="mc-text-x-small">Acesse essa aula</p><a class="btn btn-primary btn-block" href="/courses" >Comece agora</a>
-          <p class="mc-text-x-small mc-mb-3" data-ba="lesson-plan-price-copy">Acesse essa aula por apenas R$ 99,90</p>
+          <p class="mc-text-x-small margin-bottom-12" data-ba="lesson-plan-price-copy">Acesse essa aula por apenas R$ 99,90</p>
         </div>
       </div>
-      <!-- <div class="cdp__highlight-box mc-mt-8 mc-p-8">
-        <h6 class="mc-text-h6 mc-mb-1">Exercicios Exclusivos</h6>
+      <!-- <div class="cdp__highlight-box mc-mt-8 padding-32">
+        <h6 class="mc-text-h6 margin-bottom-04">Exercicios Exclusivos</h6>
         <p class="mc-text-small">Cada aula contem um exercicio exclusivo, com gabarito, para garantir que você entendeu tudo!</p>
       </div> -->
     </div>
   </div>
 </div>
-
-
