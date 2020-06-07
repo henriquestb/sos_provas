@@ -35,7 +35,6 @@
     <%= javascript_pack_tag 'application' %>
     <script>
       window.html1 = document.querySelector(".page") || "";
-      window.html2 = html1.innerHTML;
       window.list = window.document.querySelector(".disappear")
       window.list2 = list.innerHTML;
       function myFunction() {
@@ -48,7 +47,7 @@
       input = document.getElementById("search_query");
       filter = input.value.toUpperCase();
         if (input.value === "") {
-          window.html1.innerHTML = window.html2
+          window.location.reload();
           window.list.innerHTML = "";
         }
 
