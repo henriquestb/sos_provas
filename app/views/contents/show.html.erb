@@ -16,13 +16,13 @@
     <div class="lecture-container">
       <ul class="list-inline tabs-underlined">
         <li>
-          <a  data-target="lecture" class="tab-underlined active">Aulas</a>
+          <a  data-target="lecture" class="tab-underlined active"><i class="fas fa-video"></i></i> Aulas</a>
         </li>
         <li>
           <a  data-target="exercises" class="tab-underlined">Exercicios</a>
         </li>
         <li>
-          <a  data-target="slide" class="tab-underlined">Slides</a>
+          <a  data-target="slide" class="tab-underlined"><i class="far fa-file-pdf"></i>Slides</a>
         </li>
       </ul>
       <div class="tabs">
@@ -30,17 +30,38 @@
           <%= get_vimeo_iframe(8802771) %>
         </div>
         <div id="exercises" class="tabinho">
-          <iframe src="https://s3-sa-east-1.amazonaws.com/prd-multimedia-store/turma.material/230670/paper%206.pdf" ,="" width="700px" height="400px"></iframe>
+          <div class="flashcard-container">
+            <div id="flashcard">
+              <div class="cardSlideIn">
+                <div class="flashcard-game-card-front">
+                  <div class="flashcard-game-card bg-white">
+                    <div class="flashcard-game-card-header">
+                      <div class="flashcard-game-card-title">
+                        <!--?xml version="1.0" encoding="UTF-8"?-->
+                        <h4 class=""><%= @subject.name %></h4>
+                      </div>
+                    </div>
+                    <div class="flashcard-game-card-content">
+                      <div class="flashcard-game-card-content-markdown">
+                        <p>Qual a arteria que passa pelo lado direito do coração e é reponsável por bombear sangue?</p>
+                      </div>
+                      <textarea class="form-control" id="user-guess-text-area" autofocus="" rows="4" placeholder="Digite aqui a sua resposta"></textarea> <a class="btn btn-primary" >Veja a resposta</a>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div id="slide" class="tabinho">
-          <%= get_vimeo_iframe(8802771) %>
+          <iframe class="pdf_adjust" src="https://s3-sa-east-1.amazonaws.com/prd-multimedia-store/turma.material/230670/paper%206.pdf",style="/* max-width: calc(133.333vh); *//* height: calc(75vw); */"></iframe>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
 
 <script>
   const links = document.querySelectorAll(".tab-underlined")
@@ -74,6 +95,9 @@
   //   });
   // });
 </script>
+
+
+
 
 
 
