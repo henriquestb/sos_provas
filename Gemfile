@@ -11,6 +11,7 @@ gem 'puma'
 gem 'rails', '6.0.3'
 gem 'redis'
 gem 'bootstrap-sass'
+gem 'pdfjs_viewer-rails'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
