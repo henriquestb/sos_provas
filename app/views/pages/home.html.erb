@@ -45,6 +45,7 @@
       </div>
     </div>
   </div>
+
   <!-- courses infos -->
   <div id="courses" class="subjects-title">
     Para ser aprovado em qualquer materia, conte com o Sos Provas!
@@ -61,14 +62,15 @@
             <div class="card-feature-content">
               <p><%= course.description %></p>
             </div>
-            <div class="card-feature-btn">
-              <a href="/courses/<%= course.id %>">SAIBA MAIS</a>
+            <div class="card-feature-btn btn btn-primary">
+              <a href="/courses/<%= course.id %>">IR PARA O CURSO</a>
             </div>
           </div>
         <% end %>
       <% end %>
     </div>
   </div>
+
   <!-- Testimonials -->
   <div class="testimonial-title">
     O que os nossos alunos tem a dizer
