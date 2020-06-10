@@ -50,18 +50,18 @@
   width: 45px;
 }
 
-.c_header .dropdown-toggle {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  color: #505763;
-  font-weight: 400;
-  height: 45px;
-  line-height: 20px;
-  white-space: nowrap;
-}
+// .c_header .dropdown-toggle {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   border: 1px solid transparent;
+//   border-radius: 3px;
+//   color: #505763;
+//   font-weight: 400;
+//   height: 45px;
+//   line-height: 20px;
+//   white-space: nowrap;
+// }
 
 .c_header .c_header__search-wrapper {
   margin: 0 25px;
@@ -136,18 +136,10 @@ position: relative;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-// Isso parece que é pra deficientes visuais, segundo Google
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-
 .apply_filter {
   width: 70%;
+}
+
+.cadastrar-margin-right {
+  margin-right: 20px;
 }
