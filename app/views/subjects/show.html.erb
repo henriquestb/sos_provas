@@ -3,33 +3,37 @@
     <div class="col-12 col-md-8">
       <div class="cdp__highlight-box padding-32">
         <h3 class="mc-text-h3 margin-bottom-08"><%= @subject.name %></h3>
-        <!-- <p class="opacity--hinted">Cada aula, contem um exercicio para você.</p> -->
+
+        <!-- Imagem de capa -->
         <div class="margin-top-bottom-24">
           <%= cl_image_tag @subject.photo.key, height: 300, width: 650 %>
         </div>
-        <a href="/classes/alice-waters-teaches-the-art-of-home-cooking/chapters/the-art-of-simple-food">
+
+        <!-- Parte com conteúdo -->
         <% @subject.contents.each_with_index do |cont, index| %>
           <div class="row margin-top-bottom-08">
             <div class="col-2 d-none d-sm-block">
               <%= cl_image_tag cont.photo.key, class: "mc-img-responsive" %>
-              </div>
+            </div>
             <div class="col">
               <h6 class="mc-text-h6 margin-bottom-04"> <%= index + 1 %>. <%= cont.name.capitalize %></h6>
-              <p class="mc-text-small opacity--hinted"> <%= cont.description %></p>
+              <p class="opacity--hinted"> <%= cont.description %></p>
             </div>
           </div>
         <% end %>
       </div>
     </div>
+
+    <!-- Parte da direita com Monitor e botão de compra -->
     <div class="col-12 col-md-4">
       <div class="cdp__highlight-box padding-32">
         <div class="row margin-0 align-items-center margin-bottom-28">
           <div class="col-auto">
-            <img class="d-block mc-img-responsive flex-shrink-0 mc-corners--circle cdp__highlight-avatar" src="https://www.masterclass.com/course-images/images/3307/original/1570215115-AW_primary_1x1.jpg" alt="1570215115-AW_primary_1x1">
+            <img class="d-block mc-img-responsive flex-shrink-0 border-radius-50 width-64" src="https://www.masterclass.com/course-images/images/3307/original/1570215115-AW_primary_1x1.jpg" alt="1570215115-AW_primary_1x1">
           </div>
           <div class="col mc-ml-4">
             <h6 class="mc-text-h6 margin-bottom-04">Angela Patrus</h6>
-            <p class="mc-text-small">Ensina a arte da anatomia</p>
+            <p>Ensina a arte da anatomia</p>
           </div>
         </div>
         <p class="opacity--hinted">Angela Patrus é uma acadêmica de medicina da Faculdade Ciências Médicas de Minas Gerais.</p>
@@ -40,10 +44,6 @@
           <p class="mc-text-x-small margin-bottom-12">Veja esse curso por apenas R$ 99,90</p>
         </div>
       </div>
-      <!-- <div class="cdp__highlight-box mc-mt-8 padding-32">
-        <h6 class="mc-text-h6 margin-bottom-04">Exercicios Exclusivos</h6>
-        <p class="mc-text-small">Cada aula contem um exercicio exclusivo, com gabarito, para garantir que você entendeu tudo!</p>
-      </div> -->
     </div>
   </div>
 </div>

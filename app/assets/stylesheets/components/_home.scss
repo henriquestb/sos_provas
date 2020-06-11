@@ -60,10 +60,10 @@ a {
 }
 
 // olhar
-.mc-text-small {
-  line-height: 1.45;
-  letter-spacing: 0.01em;
-}
+// .mc-text-small {
+//   line-height: 1.45;
+//   letter-spacing: 0.01em;
+// }
 
 .col {
   flex-basis: 0;
@@ -93,15 +93,11 @@ a {
   }
 }
 
-.mc-corners--circle {
-  border-radius: 50%;
-}
-
 .d-block {
   display: block !important;
 }
 
-.cdp__highlight-avatar {
+.width-64 {
   width: 64px;
 }
 
