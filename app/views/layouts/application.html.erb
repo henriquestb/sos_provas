@@ -32,7 +32,8 @@
       <% end %>
     </div>
 
-    <%= javascript_pack_tag 'application' %>
+   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
     <script>
       window.html1 = document.querySelector(".page") || "";
       window.list = window.document.querySelector(".disappear")

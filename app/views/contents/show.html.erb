@@ -45,7 +45,9 @@
                       <div class="flashcard-game-card-content-markdown">
                         <p>Qual a arteria que passa pelo lado direito do coração e é reponsável por bombear sangue?</p>
                       </div>
-                      <textarea class="form-control" id="user-guess-text-area" autofocus="" rows="4" placeholder="Digite aqui a sua resposta"></textarea> <a class="btn btn-primary" >Veja a resposta</a>
+                      <textarea class="form-control" id="useranswer" autofocus="" placeholder="Digite aqui a sua resposta"></textarea>
+                      <textarea class="form-control hidden-text" id="oficialanswer" autofocus="" disabled>Aorta</textarea>
+                      <a class="btn btn-primary" id="show-message" >Veja a resposta</a>
                     </div>
                   </div>
                 </div>
@@ -64,36 +66,7 @@
 </div>
 
 <script>
-  const links = document.querySelectorAll(".tab-underlined")
-  links.forEach((link) => {
-    link.addEventListener("click", function(){
-      const active = document.querySelector(".tab-active")
-      active.classList.remove('tab-active')
-      const paint = document.querySelector(".active")
-      paint.classList.remove('active')
-      const idSelected = link.dataset.target
-      const selected = document.getElementById(idSelected)
-      selected.classList.add('tab-active');
-      link.classList.add('active')
-    });
-  });
-  // const dropdowns = document.querySelectorAll(".dropdown-btn")
-  // const dropdownsContainers = document.querySelectorAll(".dropdown-containerrr")
-  // dropdowns.forEach((drop) => {
-  //   drop.addEventListener("click", function(){
-  //     dropdowns.forEach((close) => {
-  //       close.classList.remove('active')
-  //     });
-  //     dropdownsContainers.forEach((dropcont) => {
-  //       dropcont.style.display = 'none'
-  //     });
-  //     const clickedId = drop.dataset.target
-  //     const clicked = document.getElementById(clickedId)
-  //     console.log(clicked)
-  //     drop.classList.add('active')
-  //     clicked.style.display = 'block'
-  //   });
-  // });
+
 </script>
 
 
