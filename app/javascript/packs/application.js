@@ -3,4 +3,5 @@ require("@rails/activestorage").start()
 require("channels")
 
 import "bootstrap";
-require("../packs/dropdown");
+require("./dropdown");
+require("../packs/finalpage");
