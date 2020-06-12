@@ -1,5 +1,4 @@
 class Exercise < ApplicationRecord
-  validates :name, presence: true
-  validates :description, presence: true
+  validates :answer, :question, :order, presence: true
   belongs_to :content
 end

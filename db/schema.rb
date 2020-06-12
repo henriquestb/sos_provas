@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_30_190720) do
+ActiveRecord::Schema.define(version: 2020_06_11_235448) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,8 @@ ActiveRecord::Schema.define(version: 2020_05_30_190720) do
     t.bigint "subject_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "pdf"
+    t.integer "order"
     t.index ["subject_id"], name: "index_contents_on_subject_id"
   end
 
@@ -96,9 +98,10 @@ ActiveRecord::Schema.define(version: 2020_05_30_190720) do
   end
 
   create_table "exercises", force: :cascade do |t|
+    t.text "answer"
+    t.text "question"
+    t.integer "order"
     t.bigint "content_id", null: false
-    t.string "name"
-    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["content_id"], name: "index_exercises_on_content_id"
@@ -119,6 +122,15 @@ ActiveRecord::Schema.define(version: 2020_05_30_190720) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "user_exercises", force: :cascade do |t|
+    t.bigint "exercise_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["exercise_id"], name: "index_user_exercises_on_exercise_id"
+    t.index ["user_id"], name: "index_user_exercises_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -151,5 +163,7 @@ ActiveRecord::Schema.define(version: 2020_05_30_190720) do
   add_foreign_key "exercises", "contents"
   add_foreign_key "reviews", "subjects"
   add_foreign_key "reviews", "users"
+  add_foreign_key "user_exercises", "exercises"
+  add_foreign_key "user_exercises", "users"
   add_foreign_key "users", "courses"
 end

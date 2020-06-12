@@ -1,5 +1,5 @@
 class Content < ApplicationRecord
-  validates :name, presence: true
+  validates :name, :order, presence: true
   validates :description, presence: true
   has_many :comments, dependent: :destroy
   has_many :exercises, dependent: :destroy
