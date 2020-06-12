@@ -1,7 +1,7 @@
 <div class="sidenav-center">
   <div class="sidenav">
     <a class="subject-title" href="#"><%= @subject.name %></a>
-    <% @all_classes.each_with_index do |cont, index| %>
+    <% @all_classes.order(:order).each_with_index do |cont, index| %>
       <button data-target="<%= index %>" class="dropdown-btn"><%= cont.name.capitalize %>
         <i class="fa fa-caret-down"></i>
       </button>
@@ -41,14 +41,16 @@
                         <h4 class=""><%= @subject.name %></h4>
                       </div>
                     </div>
+                    <% @content.exercises.order(:order).each do |exe|%>
                     <div class="flashcard-game-card-content">
                       <div class="flashcard-game-card-content-markdown">
-                        <p>Qual a arteria que passa pelo lado direito do coração e é reponsável por bombear sangue?</p>
+                        <p><%= exe.question %></p>
                       </div>
-                      <textarea class="form-control" id="useranswer" autofocus="" placeholder="Digite aqui a sua resposta"></textarea>
-                      <textarea class="form-control hidden-text" id="oficialanswer" autofocus="" disabled>Aorta</textarea>
-                      <a class="btn btn-primary" id="show-message" >Veja a resposta</a>
+                      <textarea class="form-control" autofocus="" placeholder="Digite aqui a sua resposta"></textarea>
+                      <textarea class="form-control hidden-text answer animated" autofocus="" disabled><%= exe.answer %></textarea>
+                      <a class="btn btn-primary button-answer" >Veja Resposta</a>
                     </div>
+                    <% end %>
                   </div>
                 </div>
                 <div>
@@ -58,7 +60,7 @@
           </div>
         </div>
         <div id="slide" class="tabinho">
-          <iframe class="pdf_adjust" src="https://s3-sa-east-1.amazonaws.com/prd-multimedia-store/turma.material/230670/paper%206.pdf",style="/* max-width: calc(133.333vh); *//* height: calc(75vw); */"></iframe>
+          <iframe class="pdf_adjust" src="<%= @content.pdf %>",style="/* max-width: calc(133.333vh); *//* height: calc(75vw); */"></iframe>
         </div>
       </div>
     </div>

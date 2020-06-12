@@ -12,11 +12,23 @@
     });
   });
 
-  const btn = document.querySelector("#show-message")
-
-  btn.addEventListener("click", function(){
-    const question = document.querySelector("#useranswer")
-    const answer = document.querySelector("#oficialanswer")
-    answer.classList.toggle("hidden-text");
-    question.classList.toggle("hidden-text");
+  const btns = document.querySelectorAll(".button-answer")
+  btns.forEach((btn) => {
+    btn.addEventListener("click", function(){
+      const exercise = btn.parentNode;
+      const answer = exercise.querySelector(".answer")
+      console.log(answer.classList.contains("hidden-text"));
+      if (answer.classList.contains("hidden-text")) {
+        btn.innerText = "Veja Resposta";
+        answer.classList.add("bounceIn");
+        answer.classList.remove("hidden-text");
+      } else {
+        btn.innerText = "Esconder Resposta";
+        answer.classList.add("bounceOut");
+        setTimeout(() => {
+          answer.classList.remove("bounceOut");
+          answer.classList.add("hidden-text");
+        }, 800);
+      }
+    });
   });

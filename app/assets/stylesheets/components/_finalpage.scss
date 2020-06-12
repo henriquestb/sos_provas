@@ -206,49 +206,49 @@
 }
 
 .animated {
-            background-image: url(/css/images/logo.png);
-            background-repeat: no-repeat;
-            background-position: left top;
-            padding-top:95px;
-            margin-bottom:60px;
-            -webkit-animation-duration: 10s;
-            animation-duration: 2s;
-            -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-         }
-         @-webkit-keyframes bounceOut {
-            0% {
-               -webkit-transform: scale(1);
-            }
-            25% {
-               -webkit-transform: scale(.95);
-            }
-            50% {
-               opacity: 1;
-               -webkit-transform: scale(1.1);
-            }
-            100% {
-               opacity: 0;
-               -webkit-transform: scale(.3);
-            }
-         }
-         @keyframes bounceOut {
-            0% {
-               transform: scale(1);
-            }
-            25% {
-               transform: scale(.95);
-            }
-            50% {
-               opacity: 1;
-               transform: scale(1.1);
-            }
-            100% {
-               opacity: 0;
-               transform: scale(.3);
-            }
-         }
-         .bounceOut {
-            -webkit-animation-name: bounceOut;
-            animation-name: bounceOut;
-         }
+  background-image: url(/css/images/logo.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding-top:95px;
+  margin-bottom:60px;
+  -webkit-animation-duration: 10s;
+  animation-duration: 0.8s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+ }
+ @-webkit-keyframes bounceOut {
+    0% {
+       -webkit-transform: scale(1);
+    }
+    25% {
+       -webkit-transform: scale(.95);
+    }
+    50% {
+       opacity: 1;
+       -webkit-transform: scale(1.1);
+    }
+    100% {
+       opacity: 0;
+       -webkit-transform: scale(.3);
+    }
+ }
+ @keyframes bounceOut {
+    0% {
+       transform: scale(1);
+    }
+    25% {
+       transform: scale(.95);
+    }
+    50% {
+       opacity: 1;
+       transform: scale(1.1);
+    }
+    100% {
+       opacity: 0;
+       transform: scale(.3);
+    }
+ }
+ .bounceOut {
+    -webkit-animation-name: bounceOut;
+    animation-name: bounceOut;
+ }
