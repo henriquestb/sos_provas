@@ -1,10 +1,11 @@
 .footer {
   background: linear-gradient(-45deg, #52ec9e 0%, #1a6a6e 100%);
   display: flex;
-  position: absolute;
+  // position: fixed;
   align-items: center;
+  bottom: 0;
   justify-content: space-between;
-  height: 100px;
+  height: 80px;
   width: 100%;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);

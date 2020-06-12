@@ -6,33 +6,35 @@
 
         <!-- Imagem de capa -->
         <div class="margin-top-bottom-24">
-          <%= cl_image_tag @subject.photo.key, height: 300, width: 650 %>
+          <%= cl_image_tag @subject.photo.key, width: "100%" %>
         </div>
 
-        <!-- Parte com conteúdo -->
-        <% @subject.contents.each_with_index do |cont, index| %>
-          <div class="row margin-top-bottom-08">
-            <div class="col-2 d-none d-sm-block">
-              <%= cl_image_tag cont.photo.key, class: "mc-img-responsive" %>
+        <!-- Parte com imagem miniatura na esquerda e conteúdo -->
+        <div class="card-all-videos">
+          <% @subject.contents.each_with_index do |cont, index| %>
+            <div class="row margin-top-bottom-08">
+              <div class="col-2 d-none d-sm-block">
+                <%= cl_image_tag cont.photo.key, class: "mc-img-responsive" %>
+              </div>
+              <div class="col">
+                <h6 class="mc-text-h6 margin-bottom-04"> <%= index + 1 %>. <%= cont.name.capitalize %></h6>
+                <p class="opacity--hinted"> <%= cont.description %></p>
+              </div>
             </div>
-            <div class="col">
-              <h6 class="mc-text-h6 margin-bottom-04"> <%= index + 1 %>. <%= cont.name.capitalize %></h6>
-              <p class="opacity--hinted"> <%= cont.description %></p>
-            </div>
-          </div>
-        <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
 
     <!-- Parte da direita com Monitor e botão de compra -->
     <div class="col-12 col-md-4">
-      <div class="cdp__highlight-box padding-32">
-        <div class="row margin-0 align-items-center margin-bottom-28">
-          <div class="col-auto">
-            <img class="d-block mc-img-responsive flex-shrink-0 border-radius-50 width-64" src="https://www.masterclass.com/course-images/images/3307/original/1570215115-AW_primary_1x1.jpg" alt="1570215115-AW_primary_1x1">
+      <div class="cdp__highlight-box padding-monitor-card padding-32">
+        <div class="row margin-bottom-18">
+          <div>
+            <img class="border-radius-50 width-64" src="https://www.masterclass.com/course-images/images/3307/original/1570215115-AW_primary_1x1.jpg" alt="1570215115-AW_primary_1x1">
           </div>
-          <div class="col mc-ml-4">
-            <h6 class="mc-text-h6 margin-bottom-04">Angela Patrus</h6>
+          <div class="col">
+            <h6><strong>Angela Patrus</strong></h6>
             <p>Ensina a arte da anatomia</p>
           </div>
         </div>

@@ -1,25 +1,3 @@
-.margin-bottom-04 {
-  margin-bottom: 0.4rem;
-}
-
-.margin-bottom-08 {
-  margin-bottom: 0.8rem;
-}
-
-.margin-bottom-12 {
-  margin-bottom: 1.2rem;
-}
-
-.margin-bottom-24 {
-  margin-bottom: 2.4rem;
-}
-
-.margin-bottom-28 {
-  margin-bottom: 2.8rem;
-}
-
-//-------------------------
-
 .margin-top-bottom-08 {
   margin-top: 0.8rem;
   margin-bottom: 0.8rem;
@@ -28,10 +6,6 @@
 .margin-top-bottom-24 {
   margin-bottom: 2.4rem;
   margin-top: 2.4rem;
-}
-
-.padding-32 {
-  padding: 3.2rem;
 }
 
 .mc-text-d3, .mc-text-d2, .mc-text-d1, .mc-text-h1, .mc-text-h2, .mc-text-h3, .mc-text-h4, .mc-text-h5, .mc-text-h6, .mc-text-h7, .mc-text-h8 {
@@ -59,12 +33,6 @@ a {
   cursor: pointer;
 }
 
-// olhar
-// .mc-text-small {
-//   line-height: 1.45;
-//   letter-spacing: 0.01em;
-// }
-
 .col {
   flex-basis: 0;
   -webkit-box-flex: 1;
@@ -72,25 +40,8 @@ a {
   max-width: 100%;
 }
 
-.col-auto, .col-auto-max {
-  -webkit-box-flex: 0;
-  flex: 0 0 auto;
-  width: auto;
-  max-width: none;
-}
-
 .mc-text-h6 {
   font-size: 1rem;
-}
-
-.cdp__highlight-box {
-  background: #fff;
-  max-height: 100vh;
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  &::-webkit-scrollbar {
-   display: none;
-  }
 }
 
 .d-block {
@@ -116,10 +67,6 @@ a {
 
 .flex-shrink-0 {
   flex-shrink: 0 !important;
-}
-
-.d-block {
-  display: block !important;
 }
 
 p {
