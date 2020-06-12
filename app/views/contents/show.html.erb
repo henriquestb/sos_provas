@@ -1,15 +1,12 @@
 <div class="sidenav-center">
   <div class="sidenav">
     <a class="subject-title" href="#"><%= @subject.name %></a>
-    <% @all_classes.order(:order).each_with_index do |cont, index| %>
-      <button data-target="<%= index %>" class="dropdown-btn"><%= cont.name.capitalize %>
-        <i class="fa fa-caret-down"></i>
+    <% @all_classes.order(:order).each do |cont| %>
+    <%= link_to course_subject_content_path(@course , @subject, cont), class: 'link' do %>
+      <button  class="dropdown-btn"><%= cont.name.capitalize %>
+        <i class="fas fa-play-circle"></i>
       </button>
-      <div id="<%= index %>" class="dropdown-container">
-        <a href="#">Aulas</a>
-        <a href="#">Exercicios</a>
-        <a href="#">Dúvidas</a>
-      </div>
+    <% end %>
     <% end %>
   </div>
   <div class="content video-center">
