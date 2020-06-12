@@ -1,0 +1,39 @@
+.cdp__highlight-box {
+  background: #fff;
+  // max-height: 100vh;
+  // overflow-y: scroll;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+   display: none;
+  }
+}
+
+.padding-32 {
+  padding: 3.2rem;
+}
+
+.monitor-card {
+  margin-top: 40%;
+}
+
+.card-all-videos {
+  margin-bottom: 0px;
+}
+
+//------------------------
+.margin-bottom-04 {
+  margin-bottom: 0.4rem;
+}
+.margin-bottom-08 {
+  margin-bottom: 0.8rem;
+}
+.margin-bottom-12 {
+  margin-bottom: 1.2rem;
+}
+.margin-bottom-18 {
+  margin-bottom: 1.8rem;
+}
+.margin-bottom-24 {
+  margin-bottom: 2.4rem;
+}
+//------------------------
