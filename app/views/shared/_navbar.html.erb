@@ -24,18 +24,22 @@
     </div>
     <div class="c_header__right">
       <!-- Barrinha vertical de separação -->
-      <!-- <div class="visible-lg-block visible-xl-block header-right-divider"></div> -->
+      <div class="visible-lg-block visible-xl-block header-right-divider"></div>
 
       <!-- Logo do carrinho de compra -->
-        <!-- <div class="dropdown cart">
-          <button type="button" class="btn btn-demo">
-            <i class="fas fa-shopping-cart" style="font-size: 26px"></i>
-          </button>
-        </div> -->
 
       <% if user_signed_in? %>
+        <div class="dropdown cart">
+          <button type="button" class="btn btn-demo" data-target="#myModal2">
+            <i class="fas fa-shopping-cart" style="font-size: 26px"></i>
+          </button>
+        </div>
+        <!-- inicio carrinho -->
+
+        <!-- fim carrinho -->
         <div class="dropdown">
           <div>
+            <%= link_to "Minhas Materias", destroy_user_session_path, method: :delete, class: "btn btn-quaternary" %>
             <%= link_to "Sair", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
           </div>
         </div>
