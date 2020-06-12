@@ -19,11 +19,11 @@
       const answer = exercise.querySelector(".answer")
       console.log(answer.classList.contains("hidden-text"));
       if (answer.classList.contains("hidden-text")) {
-        btn.innerText = "Veja Resposta";
+        btn.innerText = "Esconder Resposta";
         answer.classList.add("bounceIn");
         answer.classList.remove("hidden-text");
       } else {
-        btn.innerText = "Esconder Resposta";
+        btn.innerText = "Veja Resposta";
         answer.classList.add("bounceOut");
         setTimeout(() => {
           answer.classList.remove("bounceOut");
