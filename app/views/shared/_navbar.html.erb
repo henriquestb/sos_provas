@@ -30,12 +30,65 @@
 
       <% if user_signed_in? %>
         <div class="dropdown cart">
-          <button type="button" class="btn btn-demo" data-target="#myModal2">
+          <button type="button" class="btn btn-demo" data-target="#myModal2" data-toggle="modal">
             <i class="fas fa-shopping-cart" style="font-size: 26px"></i>
           </button>
         </div>
         <!-- inicio carrinho -->
-
+        <div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" style="z-index: 99999;">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <header class="app__cart__header">
+                <a href="#close">
+                  <i class="i-close"></i>
+                </a>
+                <h4>
+                  <% unless current_user.cart.nil? %>
+                    <span>Matérias(<%= current_user.cart.cart_subjects.count %>)</span>
+                  <% end %>
+                </h4>
+                <a href="#help">
+                  <i class="i-question-circle-o"></i>
+                </a>
+              </header>
+              <% total = 0 %>
+              <% unless current_user.cart.nil? %>
+                <% current_user.cart.cart_subjects.each do |subj| %>
+                  <div class="app__cart__item">
+                    <div class="app__cart__item__container">
+                      <div class="app__cart__item__image">
+                          <!-- <%= cl_image_tag subj.subject.photos.first.key %> -->
+                      </div>
+                      <div class="app__cart__item__info">
+                        <a class="app__cart__item__name" ><%= subj.subject.name %></a>
+                        <div class="app__cart__item__options">
+                          <div class="app__cart__item__price">
+                            <span class="is-numeric">R$ <%= subj.subject.price %>,00</span>
+                            <% total = total + subj.subject.price %>
+                          </div>
+                          <%= link_to cart_subject_path(subj), method: :delete, data: {:confirm => "You sure?" } do  %>
+                            <i class="fas fa-trash"></i>
+                          <% end %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+              <% end %>
+              <footer class="app__cart__footer">
+                <div class="app__cart__footer__total">
+                  <span>Total a pagar</span>
+                  <span class="is-numeric">R$ <%= total %>,00</span>
+                </div>
+                <div class="app__cart__footer__actions">
+                  <form action="<%= carts_path %>">
+                    <input class="btn btn-primary" type="submit" value="Ir para pagamento" />
+                  </form>
+                </div>
+              </footer>
+            </div>
+          </div><!-- modal-dialog -->
+        </div><!-- modal -->
         <!-- fim carrinho -->
         <div class="dropdown">
           <div>
