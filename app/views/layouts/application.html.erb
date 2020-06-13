@@ -18,6 +18,7 @@
     </div>
     <div class="disappear corrector">
       <% Subject.all.each_with_index do |subject, index| %>
+        <% if subject.contents.first.nil? %>
         <%= link_to course_subject_path(subject.courses.first.id, subject) do %>
         <div class="row margin-top-bottom-08 apply_filter mx-auto">
           <div class="col-2 d-none d-sm-block">
@@ -29,6 +30,19 @@
           </div>
         </div>
         <% end %>
+        <% else %>
+        <%= link_to course_subject_content_path(subject.courses.first.id, subject, subject.contents.first.id) do %>
+        <div class="row margin-top-bottom-08 apply_filter mx-auto">
+          <div class="col-2 d-none d-sm-block">
+            <%= cl_image_tag subject.photo.key, class: 'mc-img-responsive' %>
+          </div>
+          <div class="col">
+            <h6 class="mc-text-h6 margin-bottom-04"><%= subject.name.capitalize %></h6>
+            <p class="mc-text-small opacity--hinted"> <%= subject.description %></p>
+          </div>
+        </div>
+        <% end %>
+      <% end %>
       <% end %>
     </div>
 
