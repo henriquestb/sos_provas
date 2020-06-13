@@ -95,7 +95,7 @@
 
 .subject-title {
     padding-left: 10px !important;
-    font-size: 20px !important;
+    font-size: 22px !important;
     font-weight: 500;
     color: #3d3d3d !important;
     letter-spacing: -0.01em !important;
@@ -140,60 +140,60 @@
 }
 
 .flashcard-container .cardSpinner {
-    position: absolute;
-    margin-top: 50px;
-    width: 100%;
-    text-align: center;
-    color: #969696;
+  position: absolute;
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+  color: #969696;
 }
 
 .flashcard-game-card {
-    padding: 15px 30px;
-    margin: 10px 0;
-    // border: 1px solid #ECECEC;
-    border-radius: 3px;
-    min-height: 250px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
-    width: 640px;
+  padding: 15px 30px;
+  margin: 10px 0;
+  // border: 1px solid #ECECEC;
+  border-radius: 3px;
+  min-height: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  width: 640px;
 }
 
 .flashcard-game-card .flashcard-game-card-header {
-    margin-bottom: 14px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.flashcard-game-card .flashcard-game-card-header .flashcard-game-card-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.flashcard-game-card .flashcard-game-card-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flashcard-game-card .flashcard-game-card-content {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: column;
-    flex: 1 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  flex: 1 0 auto;
 }
 
 .flashcard-game-card .flashcard-game-card-content .flashcard-game-card-content-markdown {
-    width: 100%;
+  width: 100%;
 }
 
 .list-inline {
-    margin-bottom: 0.6rem;
-    padding-left: 0;
-    list-style: none;
+  margin-bottom: 0.6rem;
+  padding-left: 0;
+  list-style: none;
 }
 
 .hidden-text{
