@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "/pagamento", to: 'carts#pagamento', as: 'pagamento'
   resources :courses do
     resources :subjects, only: [:show, :index] do
+      resources :bought_subjects
       resources :contents, only: [:show]
     end
   end

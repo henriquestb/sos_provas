@@ -11,17 +11,28 @@
   </div>
   <div class="content video-center">
     <div class="lecture-container">
-      <ul class="list-inline tabs-underlined">
-        <li>
-          <a  data-target="lecture" class="tab-underlined active"><i class="fas fa-video"></i></i> Aulas</a>
-        </li>
-        <li>
-          <a  data-target="exercises" class="tab-underlined"><i class="fas fa-list"></i> Exercicios</a>
-        </li>
-        <li>
-          <a  data-target="slide" class="tab-underlined"><i class="far fa-file-pdf"></i> Slides</a>
-        </li>
-      </ul>
+      <div class="all-options">
+        <div class="class-options">
+          <ul class="list-inline tabs-underlined">
+            <li>
+              <a  data-target="lecture" class="tab-underlined active"><i class="fas fa-video"></i></i> Aulas</a>
+            </li>
+            <li>
+              <a  data-target="exercises" class="tab-underlined"><i class="fas fa-list"></i> Exercicios</a>
+            </li>
+            <li>
+              <a  data-target="slide" class="tab-underlined"><i class="far fa-file-pdf"></i> Slides</a>
+            </li>
+          </ul>
+        </div>
+        <div class="payment-options">
+          <%= link_to new_course_subject_bought_subject_path(@course, @subject), class: 'link' do %>
+            <button class="btn btn-primary">
+              Compre Agora
+            </button>
+          <% end %>
+        </div>
+      </div>
       <div class="tabs">
         <div id="lecture" class="tabinho tab-active">
           <%= get_vimeo_iframe(8802771) %>

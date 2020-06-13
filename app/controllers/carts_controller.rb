@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-  before_action :find_and_authorize_cart, only: [:pagamento, :resumo, :destroy]
+  before_action :find_and_authorize_cart, only: [:pagamento,:update, :resumo, :destroy]
   def index
     @cart = policy_scope(Cart).order(created_at: :desc)
     @cart = Cart.find_or_create_by!(user: current_user, status: false)
@@ -15,12 +15,7 @@ class CartsController < ApplicationController
     authorize Cart
   end
 
-  def resumo
-    @cart_products = @cart.cart_products
-    @total = 0
-    @cart_products.each do |prod|
-      @total += prod.product.price*prod.quantity
-    end
+  def update
   end
 
   def destroy
@@ -34,7 +29,7 @@ class CartsController < ApplicationController
   private
 
   def find_and_authorize_cart
-    @cart = Cart.find_by(user: current_user, status: false)
+    @cart = Cart.find_or_create_by!(user: current_user, status: false)
     authorize @cart
   end
 end

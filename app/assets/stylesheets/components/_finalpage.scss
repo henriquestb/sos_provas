@@ -112,7 +112,7 @@
   margin: 8px 16px;
   cursor: pointer;
   text-decoration: none;
-  border-bottom: 13px solid transparent;
+  border-bottom: 40px solid transparent;
 }
 
 .tabs-underlined .tab-underlined.active {
@@ -288,3 +288,10 @@
   -webkit-animation-name: bounceIn;
   animation-name: bounceIn;
  }
+
+.all-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
