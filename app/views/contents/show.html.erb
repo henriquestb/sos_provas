@@ -1,12 +1,13 @@
 <div class="sidenav-center">
   <div class="sidenav">
     <a class="subject-title" href="#"><%= @subject.name %></a>
-    <% @all_classes.order(:order).each do |cont| %>
-    <%= link_to course_subject_content_path(@course , @subject, cont), class: 'link' do %>
-      <button  class="dropdown-btn"><%= cont.name.capitalize %>
-        <i class="fas fa-play-circle"></i>
-      </button>
-    <% end %>
+    <% @all_classes.order(:order).each_with_index do |cont, index| %>
+      <%= link_to course_subject_content_path(@course , @subject, cont), class: 'link' do %>
+        <button class="dropdown-btn">
+          <h6 class="mc-text-h6 margin-bottom-04"> <%= index + 1 %>. <%= cont.name.capitalize %></h6>
+        </button>
+          <!-- <i class="fas fa-play-circle"></i> -->
+      <% end %>
     <% end %>
   </div>
   <div class="content video-center">
@@ -49,8 +50,6 @@
                     </div>
                     <% end %>
                   </div>
-                </div>
-                <div>
                 </div>
               </div>
             </div>
