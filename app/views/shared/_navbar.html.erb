@@ -92,7 +92,15 @@
         <!-- fim carrinho -->
         <div class="dropdown">
           <div>
-            <%= link_to "Minhas Materias", destroy_user_session_path, method: :delete, class: "btn btn-quaternary" %>
+            <button class="btn btn-quaternary" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Minhas Materias</button>
+            <% current_user.subjects.each do |subj| %>
+
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" ><%= subj.name %></a>
+              </div>
+
+            <% end %>
+
             <%= link_to "Sair", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
           </div>
         </div>

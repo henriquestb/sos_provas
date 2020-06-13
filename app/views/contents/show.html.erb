@@ -1,14 +1,21 @@
 <div class="sidenav-center">
   <div class="sidenav">
     <a class="subject-title" href="#"><%= @subject.name %></a>
-    <% @all_classes.order(:order).each_with_index do |cont, index| %>
-      <%= link_to course_subject_content_path(@course , @subject, cont), class: 'link' do %>
-        <button class="dropdown-btn">
-          <h6 class="mc-text-h6 margin-bottom-04"> <%= index + 1 %>. <%= cont.name.capitalize %></h6>
-        </button>
-          <!-- <i class="fas fa-play-circle"></i> -->
+      <% @all_classes.order(:order).each_with_index do |cont, index| %>
+        <% if current_user.subjects.include?(@subject) || index == 0 %>
+          <%= link_to course_subject_content_path(@course , @subject, cont), class: 'link' do %>
+            <button class="dropdown-btn">
+            <h6 class="mc-text-h6 margin-bottom-04"><i class="far fa-play-circle"></i> <%= index + 1 %>. <%= cont.name.capitalize %></h6>
+            </button>
+          <% end %>
+        <% else %>
+          <%= link_to course_subject_content_path(@course , @subject, cont), class: 'link' do %>
+            <button class="dropdown-btn">
+              <h6 class="mc-text-h6 margin-bottom-04"><i class="fas fa-lock"></i> <%= index + 1 %>. <%= cont.name.capitalize %></h6>
+            </button>
+          <% end %>
+        <% end %>
       <% end %>
-    <% end %>
   </div>
   <div class="content video-center">
     <div class="lecture-container">
@@ -67,6 +74,7 @@
           </div>
         </div>
         <div id="slide" class="tabinho">
+          <!-- <%= @content.pdf %> -->
           <iframe class="pdf_adjust" src="<%= @content.pdf %>",style="/* max-width: calc(133.333vh); *//* height: calc(75vw); */"></iframe>
         </div>
       </div>
