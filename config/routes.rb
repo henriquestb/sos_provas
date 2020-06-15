@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "users/registrations" }
   root to: 'pages#home'
   resources :carts
+  resources :orders, only: [:show, :create] do
+    resources :payments, only: :new
+  end
   get "/pagamento", to: 'carts#pagamento', as: 'pagamento'
   resources :courses do
     resources :subjects, only: [:show, :index] do
