@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_13_135734) do
+ActiveRecord::Schema.define(version: 2020_06_15_111751) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -110,6 +110,18 @@ ActiveRecord::Schema.define(version: 2020_06_13_135734) do
     t.index ["content_id"], name: "index_exercises_on_content_id"
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.string "state"
+    t.integer "amount_cents", default: 0, null: false
+    t.string "checkout_session_id"
+    t.bigint "user_id", null: false
+    t.bigint "subject_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["subject_id"], name: "index_orders_on_subject_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "subject_id", null: false
@@ -125,7 +137,7 @@ ActiveRecord::Schema.define(version: 2020_06_13_135734) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "price"
+    t.integer "price_cents", default: 0, null: false
   end
 
   create_table "user_exercises", force: :cascade do |t|
@@ -149,7 +161,6 @@ ActiveRecord::Schema.define(version: 2020_06_13_135734) do
     t.string "university"
     t.bigint "course_id", null: false
     t.string "name"
-    t.string "cart"
     t.index ["course_id"], name: "index_users_on_course_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
@@ -167,6 +178,8 @@ ActiveRecord::Schema.define(version: 2020_06_13_135734) do
   add_foreign_key "course_subjects", "courses"
   add_foreign_key "course_subjects", "subjects"
   add_foreign_key "exercises", "contents"
+  add_foreign_key "orders", "subjects"
+  add_foreign_key "orders", "users"
   add_foreign_key "reviews", "subjects"
   add_foreign_key "reviews", "users"
   add_foreign_key "user_exercises", "exercises"

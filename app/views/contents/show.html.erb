@@ -34,10 +34,9 @@
           </ul>
         </div>
         <div class="payment-options">
-          <%= link_to new_course_subject_bought_subject_path(@course, @subject), class: 'link' do %>
-            <button class="btn btn-primary">
-              Compre Agora
-            </button>
+          <%= form_tag orders_path do %>
+            <%= hidden_field_tag 'subject_id', @subject.id %>
+            <%= submit_tag 'Compre Agora', class: 'btn btn-primary' %>
           <% end %>
         </div>
       </div>
