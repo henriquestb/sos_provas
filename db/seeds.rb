@@ -153,3 +153,4 @@ exercise.content = rins
 exercise.save!
 
 
+
