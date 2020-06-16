@@ -36,6 +36,7 @@ perineo_photo = URI.open('https://res.cloudinary.com/masterbi/image/upload/v1591
 bs_photo = URI.open('https://res.cloudinary.com/masterbi/image/upload/v1591751582/SOS-Provas/bs_pvlvkg.jpg')
 bi_photo = URI.open('https://res.cloudinary.com/masterbi/image/upload/v1591751602/SOS-Provas/bi_ueh4k5.jpg')
 
+Order.destroy_all
 CartSubject.destroy_all
 Content.destroy_all
 Subject.destroy_all
