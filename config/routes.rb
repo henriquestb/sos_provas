@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount StripeEvent::Engine, at: '/stripe-webhooks'
   mount PdfjsViewer::Rails::Engine => "/pdfjs", as: 'pdfjs'
   devise_for :users, controllers: { registrations: "users/registrations" }
   root to: 'pages#home'
