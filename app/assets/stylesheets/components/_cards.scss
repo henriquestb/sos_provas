@@ -40,8 +40,14 @@
   white-space: normal;
   font-weight: 700;
   height: 42px;
-  font-size: 15px;
   color: #29303b;
+  font-size: 15px;
+  opacity: 0.86;
+}
+
+.opacity-icon{
+  opacity: 0.82;
+  padding-bottom: 6px;
 }
 
 .card-feature-content {
@@ -104,3 +110,4 @@
   opacity: .7;
   margin-bottom: 4px;
 }
+

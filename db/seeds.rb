@@ -47,11 +47,11 @@ User.destroy_all
 Course.destroy_all
 
 #Courses
-medicina = Course.create!(name: 'Medicina', description: 'Temos o conteúdo completo e ainda mais recursos para uma preparação com excelência.', icon: '<i class="fas fa-stethoscope fa-4x"></i>')
+medicina = Course.create!(name: 'Medicina', description: 'Aprenda a sua materia em minutos o que você levaria horas com resumos direto ao ponto, exercícios resolvidos e com video aulas incríveis!', icon: '<i class="fas fa-stethoscope fa-4x"></i>')
 medicina.photo.attach(io: med_photo, filename: 'medics.jpg', content_type: 'image/jpg')
-economia = Course.create!(name: 'Economia', description: 'Temos o conteúdo completo e ainda mais recursos para uma preparação com excelência.', icon: '<i class="fas fa-square-root-alt fa-3x"></i>')
+economia = Course.create!(name: 'Economia', description: 'Aprenda a sua materia em minutos o que você levaria horas com resumos direto ao ponto, exercícios resolvidos e aulões que salvam!', icon: '<i class="fas fa-square-root-alt fa-3x"></i>')
 economia.photo.attach(io: eco_photo, filename: 'economics.jpg', content_type: 'image/jpg')
-engenharia = Course.create!(name: 'Engenharia', description: 'Temos o conteúdo completo e ainda mais recursos para uma preparação com excelência.', icon: '<i class="fas fa-calculator fa-3x"></i>')
+engenharia = Course.create!(name: 'Engenharia', description: 'Aprenda a sua materia em minutos o que você levaria horas com resumos direto ao ponto, exercícios resolvidos e aulões que salvam!', icon: '<i class="fas fa-calculator fa-3x"></i>')
 engenharia.photo.attach(io: eng_photo, filename: 'engineering.jpg', content_type: 'image/jpg')
 user = User.create!(email: 'oi@oi.com', password: '123456', course: engenharia)
 
