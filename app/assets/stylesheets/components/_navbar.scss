@@ -127,7 +127,7 @@ position: relative;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   border: 1px solid #E7E7E7;
   margin-top: 15px;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 .search-form-control .form-control:focus {
@@ -244,4 +244,27 @@ position: relative;
 
 .dropdown-menu {
   min-width: 9rem;
+}
+
+.each-subject {
+  height: 80px;
+
+  .mc-img-responsive {
+    flex: 0 0 45%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  .dropdown-item {
+    padding: 32px;
+  }
+}
+
+.dropdown-menu.show{
+  position: absolute;
+  will-change: transform;
+  top: 0px;
+  left: 0px;
+  transform: translate3d(-100px, 54px, 0px) !important;
+  width: 300px;
 }
