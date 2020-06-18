@@ -16,17 +16,16 @@ class CoursesController < ApplicationController
   # GET /courses/new
   def new
     @course = Course.new
+    authorize @course
   end
 
   # GET /courses/1/edit
-  def edit
-    # @dose = Dose.new
-  end
+  def edit; end
 
   def destroy
     @course.destroy
     respond_to do |format|
-      format.html { redirect_to courses_url, notice: 'course was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'course was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -44,8 +43,8 @@ class CoursesController < ApplicationController
   end
 
   def create
-    @course = course.new(course_params)
-
+    @course = Course.new(course_params)
+    authorize @course
     respond_to do |format|
       if @course.save
         format.html { redirect_to @course, notice: 'course was successfully created.' }
@@ -65,6 +64,6 @@ class CoursesController < ApplicationController
   end
   # Only allow a list of trusted parameters through.
   def course_params
-    params.require(:course).permit(:name)
+    params.require(:course).permit(:name, :description, :icon, :photo)
   end
 end

@@ -50,8 +50,8 @@
   <div id="courses" class="subjects-title">
     Para ser aprovado em qualquer materia, conte com o Sos Provas!
   </div>
-  <div class="container d-flex justify-content-around">
-    <div class="cards">
+  <div class="container">
+    <div class="cards row d-flex justify-content-center">
       <% @courses.each do |course| %>
         <%= link_to course_path(course), class: 'link' do %>
           <div class="card-features">

@@ -38,3 +38,15 @@
     </div>
   </div>
 </div>
+
+<div class="form-actions">
+  <% if current_user.present? && policy(@course).create? %>
+    <%= link_to "Novo Curso", new_course_path, class: "btn btn-primary my-2 mx-2" %>
+  <% end %>
+  <% if current_user.present? && policy(@course).update? %>
+    <%= link_to "Editar Curso", edit_course_path, class: "btn btn-primary my-2 mx-2" %>
+  <% end %>
+  <% if current_user.present? && policy(@course).destroy? %>
+    <%= link_to "Excluir Curso", course_path, method: :delete, data: {:confirm => "You sure?" }, class: "btn btn-primary my-2 mx-2" %>
+  <% end %>
+</div>
