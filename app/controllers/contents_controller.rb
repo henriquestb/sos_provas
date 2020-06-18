@@ -3,7 +3,7 @@ class ContentsController < ApplicationController
 
   def show
     @all_classes = @subject.contents
-    authorize Content
+    authorize @content
   end
 
   def new

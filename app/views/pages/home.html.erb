@@ -9,7 +9,7 @@
         <div class="notice-streamer__text">
           Estude qualquer matéria, a qualquer hora. Escolha uma de nossas materias e seja aprovado!
         </div>
-        <a class="btn btn-flat btn-lg btn-block" href="#courses">Descubra as nossas aulas</a>
+        <a class="btn btn-flat btn-lg btn-block" id="discover">Descubra as nossas aulas</a>
       </div>
     </div>
   </div>
@@ -120,3 +120,11 @@
   </div>
 </div>
 
+
+<script>
+  document.querySelector('#discover').addEventListener('click', ()=>  {
+    document.querySelector('#courses').scrollIntoView({
+        behavior: 'smooth'
+    });
+  })
+</script>

@@ -6,6 +6,7 @@ class ContentPolicy < ApplicationPolicy
   end
 
   def show?
-    true
+    return true if record.order == 0
+    user.bought_subjects.exists?(subject_id:record.subject_id)
   end
 end
