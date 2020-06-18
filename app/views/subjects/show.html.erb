@@ -44,13 +44,22 @@
         <div class="cdp__sidebar-cta mc-text--center">
           <!-- <p class="mc-text-x-small">Acesse essa aula</p> -->
           <%= link_to "Veja a primeira aula", course_subject_content_path(@course , @subject, @content), class: "btn btn-primary btn-block" %>
-          <p class="mc-text-x-small margin-bottom-12"><p>Veja essa aula por apenas: <%= humanized_money_with_symbol(@subject.price) %></p></p>
+          <p class="mc-text-x-small margin-bottom-12"><p>Adquira essa aula por apenas: <%= humanized_money_with_symbol(@subject.price) %></p></p>
           <%= form_tag orders_path do %>
             <%= hidden_field_tag 'subject_id', @subject.id %>
-            <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+            <%= submit_tag 'Comprar agora', class: 'btn btn-primary btn-block' %>
           <% end %>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
+<script>
+  document.querySelector('#discover').addEventListener('click', ()=>  {
+    document.querySelector('#courses').scrollIntoView({
+        behavior: 'smooth'
+    });
+  })
+</script>

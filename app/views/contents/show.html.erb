@@ -33,12 +33,14 @@
             </li>
           </ul>
         </div>
-        <div class="payment-options">
-          <%= form_tag orders_path do %>
-            <%= hidden_field_tag 'subject_id', @subject.id %>
-            <%= submit_tag 'Compre Agora', class: 'btn btn-primary' %>
-          <% end %>
-        </div>
+        <% unless current_user.subjects.include?(@subject) %>
+          <div class="payment-options">
+            <%= form_tag orders_path do %>
+              <%= hidden_field_tag 'subject_id', @subject.id %>
+              <%= submit_tag 'Compre Agora', class: 'btn btn-primary' %>
+            <% end %>
+          </div>
+        <% end %>
       </div>
       <div class="tabs">
         <div id="lecture" class="tabinho tab-active">

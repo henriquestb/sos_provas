@@ -3,7 +3,7 @@
     <h1 class="text-center font-size">Aprenda <%= @course.name.downcase %> e seja aprovado!</h1>
     <p class="text-center"><%= @course.description %></p>
     <div class="cta-container text-center">
-      <a class="btn btn-flat btn-lg width-50" href="#subjects">Descubra as nossas materias</a>
+      <a class="btn btn-flat btn-lg width-50" id="discover">Descubra as nossas materias</a>
     </div>
   </div>
 
@@ -12,7 +12,7 @@
   </div>
 </div>
 
-<div id="subjects" class="container mx-auto">
+<div id="courses" class="container mx-auto">
   <div class="cards-subject">
     <div class="row">
       <% Subject.all.select{ |sub| sub.courses.include?(@course) }.each do |subject| %>
@@ -50,3 +50,12 @@
     <%= link_to "Excluir Curso", course_path, method: :delete, data: {:confirm => "You sure?" }, class: "btn btn-primary my-2 mx-2" %>
   <% end %>
 </div>
+
+
+<script>
+  document.querySelector('#discover').addEventListener('click', ()=>  {
+    document.querySelector('#courses').scrollIntoView({
+        behavior: 'smooth'
+    });
+  })
+</script>

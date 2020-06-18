@@ -13,7 +13,9 @@
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <div class="page">
-      <%= yield %>
+      <div class="envelops-page">
+        <%= yield %>
+      </div>
       <%= render 'shared/footer' %>
     </div>
     <div class="disappear corrector">
