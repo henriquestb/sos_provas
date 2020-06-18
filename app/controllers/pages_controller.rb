@@ -4,4 +4,8 @@ class PagesController < ApplicationController
   def home
     @courses = Course.all
   end
+
+  def pay
+    @subject = Subject.find(params[:subject])
+  end
 end
