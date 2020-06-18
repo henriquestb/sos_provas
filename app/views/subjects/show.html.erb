@@ -5,7 +5,7 @@
         <h3 class="mc-text-h3 margin-bottom-08"><%= @subject.name %></h3>
 
         <!-- Imagem de capa -->
-        <div class="margin-top-bottom-24">
+        <div class="margin-top-bottom-24 adjust-img">
           <%= cl_image_tag @subject.photo.key, width: "100%" %>
         </div>
 
@@ -21,6 +21,7 @@
                 <p class="opacity--hinted"> <%= cont.description %></p>
               </div>
             </div>
+          <div class="separator mc-mt-8 margin-bottom-24"></div>
           <% end %>
         </div>
       </div>

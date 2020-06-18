@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :payments, only: :new
   end
   get "/pagamento", to: 'carts#pagamento', as: 'pagamento'
+  get "/pay", to: 'pages#pay', as: 'pay'
   resources :courses do
     resources :subjects, only: [:show, :index] do
       resources :bought_subjects

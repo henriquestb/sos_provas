@@ -1,0 +1,4 @@
+<%= form_tag orders_path do %>
+  <%= hidden_field_tag 'subject_id', @subject.id %>
+  <%= submit_tag 'Compre Agora', class: 'btn btn-primary' %>
+<% end %>
