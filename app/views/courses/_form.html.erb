@@ -1,0 +1,12 @@
+<%= simple_form_for(@course) do |f| %>
+  <%= f.error_notification %>
+    <%= f.input :name,
+                required: true,
+                autofocus: true %>
+    <%= f.input :description,
+            autofocus: true %>
+    <%= f.input :icon,
+                required: true %>
+    <%= f.input :photo, as: :file %>
+    <%= f.button :submit, "Salvar" %>
+<% end %>
