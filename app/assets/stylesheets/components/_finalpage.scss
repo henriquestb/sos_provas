@@ -107,10 +107,14 @@
 .tabs-underlined .tab-underlined {
   color: black;
   padding: 8px;
-  margin: 8px 16px;
+  margin: 8px 4px;
   cursor: pointer;
   text-decoration: none;
-  border-bottom: 40px solid transparent;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-left: 1px solid rgba(0,0,0,0.1);
+  border-right: 1px solid rgba(0,0,0,0.1);
+  border-bottom: none;
+  opacity: 1;
 }
 
 .tabs-underlined .tab-underlined.active {
@@ -292,4 +296,19 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 8px;
+}
+
+.border-video {
+  padding: 9px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0 0.25rem 0.25rem 0.25rem;
+}
+
+.class-options{
+  margin-bottom: -40px;
+}
+
+.padding-button {
+  margin-top: 8px;
 }

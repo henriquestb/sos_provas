@@ -9,11 +9,9 @@
             </button>
           <% end %>
         <% else %>
-          <%= link_to pay_path(subject: @subject), class: 'link' do %>
-            <button class="dropdown-btn">
-              <h6 class="mc-text-h6 margin-bottom-04"><i class="fas fa-lock"></i> <%= index + 1 %>. <%= cont.name.capitalize %></h6>
-            </button>
-          <% end %>
+          <button class="dropdown-btn" data-toggle="modal" data-target="#exampleModalCenter">
+            <h6 class="mc-text-h6 margin-bottom-04"><i class="fas fa-lock"></i> <%= index + 1 %>. <%= cont.name.capitalize %></h6>
+          </button>
         <% end %>
       <% end %>
   </div>
@@ -44,30 +42,34 @@
       </div>
       <div class="tabs">
         <div id="lecture" class="tabinho tab-active">
-          <%= get_vimeo_iframe(8802771) %>
+          <div class="border-video">
+            <%= get_vimeo_iframe(8802771) %>
+          </div>
         </div>
         <div id="exercises" class="tabinho">
-          <div class="flashcard-container">
-            <div id="flashcard">
-              <div class="cardSlideIn">
-                <div class="flashcard-game-card-front">
-                  <div class="flashcard-game-card bg-white">
-                    <div class="flashcard-game-card-header">
-                      <div class="flashcard-game-card-title">
-                        <!--?xml version="1.0" encoding="UTF-8"?-->
-                        <h4 class=""><%= @subject.name %></h4>
+          <div class="border-video">
+            <div class="flashcard-container">
+              <div id="flashcard">
+                <div class="cardSlideIn">
+                  <div class="flashcard-game-card-front">
+                    <div class="flashcard-game-card bg-white">
+                      <div class="flashcard-game-card-header">
+                        <div class="flashcard-game-card-title">
+                          <!--?xml version="1.0" encoding="UTF-8"?-->
+                          <h4 class=""><%= @subject.name %></h4>
+                        </div>
                       </div>
-                    </div>
-                    <% @content.exercises.order(:order).each do |exe|%>
-                    <div class="flashcard-game-card-content">
-                      <div class="flashcard-game-card-content-markdown">
-                        <p><%= exe.question %></p>
+                      <% @content.exercises.order(:order).each do |exe|%>
+                      <div class="flashcard-game-card-content">
+                        <div class="flashcard-game-card-content-markdown">
+                          <p><%= exe.question %></p>
+                        </div>
+                        <textarea class="form-control" autofocus="" placeholder="Digite aqui a sua resposta"></textarea>
+                        <textarea class="form-control hidden-text answer animated" autofocus="" disabled><%= exe.answer %></textarea>
+                        <a class="btn btn-primary button-answer padding-button" >Veja Resposta</a>
                       </div>
-                      <textarea class="form-control" autofocus="" placeholder="Digite aqui a sua resposta"></textarea>
-                      <textarea class="form-control hidden-text answer animated" autofocus="" disabled><%= exe.answer %></textarea>
-                      <a class="btn btn-primary button-answer" >Veja Resposta</a>
+                      <% end %>
                     </div>
-                    <% end %>
                   </div>
                 </div>
               </div>
@@ -75,9 +77,11 @@
           </div>
         </div>
         <div id="slide" class="tabinho">
-          <!-- <%= @content.pdf %> -->
-          <iframe class="pdf_adjust" src="<%= @content.pdf %>",style="/* max-width: calc(133.333vh); *//* height: calc(75vw); */"></iframe>
+          <div class="border-video">
+            <iframe class="pdf_adjust" src="<%= @content.pdf %>",style="/* max-width: calc(133.333vh); *//* height: calc(75vw); */"></iframe>
+          </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -87,8 +91,34 @@
 
 </script>
 
-
-
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style="margin: 0 auto;">Contéudo Para Assinantes</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Compre para continuar assistindo ao nosso contéudo!<br>
+        Nesse curso você tera acesso a: <br>
+        <br>
+        <li> Explicações em video</li>
+        <li>Todos os exércios dessa materia</li>
+        <li>Slide exclusivo com resumo completo</li>
+        <li>Exercícios resolvidos passo a passo</li>
+      </div>
+      <div class="modal-footer">
+        <%= form_tag orders_path do %>
+          <%= hidden_field_tag 'subject_id', @subject.id %>
+          <%= submit_tag 'Compre Agora', class: 'btn btn-primary btn-block' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
