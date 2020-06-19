@@ -4,7 +4,7 @@
       <% @all_classes.order(:order).each_with_index do |cont, index| %>
         <% if current_user.subjects.include?(@subject) || index == 0 %>
           <%= link_to course_subject_content_path(@course , @subject, cont), class: 'link' do %>
-            <button class="dropdown-btn">
+            <button class="dropdown-btn" >
             <h6 class="mc-text-h6 margin-bottom-04"><i class="far fa-play-circle"></i> <%= index + 1 %>. <%= cont.name.capitalize %></h6>
             </button>
           <% end %>
@@ -31,7 +31,11 @@
             </li>
           </ul>
         </div>
-        <% unless current_user.subjects.include?(@subject) %>
+        <% if current_user.subjects.include?(@subject) %>
+          <div class="payment-options">
+              <%= submit_tag '', class: 'btn btn-primary hide' %>
+          </div>
+        <% else %>
           <div class="payment-options">
             <%= form_tag orders_path do %>
               <%= hidden_field_tag 'subject_id', @subject.id %>
@@ -81,7 +85,6 @@
             <iframe class="pdf_adjust" src="<%= @content.pdf %>",style="/* max-width: calc(133.333vh); *//* height: calc(75vw); */"></iframe>
           </div>
         </div>
-
       </div>
     </div>
   </div>

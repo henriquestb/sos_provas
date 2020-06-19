@@ -29,7 +29,7 @@
 /* On mouse-over */
 .sidenav a:hover {
   opacity: 1;
-  background: linear-gradient(-180deg, #eaeaea 0%, #ededed 90%);
+  // background: linear-gradient(-180deg, #eaeaea 0%, #ededed 90%);
   color: #333333;
 }
 
@@ -203,7 +203,7 @@
 }
 
 .form-control {
-  padding-bottom: 5px;
+  padding-bottom: 0px;
 }
 
 .animated {
@@ -211,7 +211,6 @@
   background-repeat: no-repeat;
   background-position: left top;
   padding-top:95px;
-  margin-bottom:60px;
   -webkit-animation-duration: 10s;
   animation-duration: 0.8s;
   -webkit-animation-fill-mode: both;
@@ -311,4 +310,17 @@
 
 .padding-button {
   margin-top: 8px;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.hide:hover {
+
+}
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: #f2fff7;
+    opacity: 1;
 }
