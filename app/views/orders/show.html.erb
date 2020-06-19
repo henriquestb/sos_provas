@@ -1,13 +1,13 @@
-  <div class="row py-4">
-    <div class="col">
-      <h1>Ordem #<%= @order.id %> <small><span class="badge badge-primary"><%= @status %></span></small></h1>
+  <div class="row d-flex center justi">
+    <div class="center bord">
+      <h1 style="text-align: center;">Ordem #<%= @order.id %> <small><span class="badge badge-primary"><%= @status %></span></small></h1>
       <ul class="list-unstyled">
         <li><strong>Emitido em</strong> <%= @order.created_at.to_date %></li>
         <li><strong>Matéria</strong> <%= @order.subject.name %></li>
         <li><strong>TOTAL</strong> <%= humanized_money_with_symbol @order.amount %></li>
         </li>
       </ul>
-      <p>O seu curso sera liberado em alguns minutos </p>
+      <p style="text-align: center;">O seu curso sera liberado em alguns minutos </p>
     </div>
   </div>
 </div>
