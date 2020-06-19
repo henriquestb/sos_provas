@@ -115,6 +115,9 @@
   border-right: 1px solid rgba(0,0,0,0.1);
   border-bottom: none;
   opacity: 1;
+  border: 1px solid transparent;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
 }
 
 .tabs-underlined .tab-underlined.active {

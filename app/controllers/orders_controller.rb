@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  STATUS_TRANSLATE = {paid: 'pago',pending: 'pendente'}
   def create
     subject = Subject.find(params[:subject_id])
     order  = Order.create!(subject: subject, amount: subject.price, state: 'pending', user: current_user)
@@ -6,7 +7,7 @@ class OrdersController < ApplicationController
       payment_method_types: ['card'],
       line_items: [{
         name: subject.name,
-        images: [subject.photo.key],
+        images: [url_for(subject.photo)],
         amount: subject.price_cents,
         currency: 'brl',
         quantity: 1
@@ -21,6 +22,7 @@ class OrdersController < ApplicationController
 
   def show
     @order = current_user.orders.find(params[:id])
+    @status = STATUS_TRANSLATE[@order.state.to_sym]
     authorize Order
   end
 end

@@ -1,9 +1,9 @@
   <div class="row py-4">
     <div class="col">
-      <h1>Order #<%= @order.id %> <small><span class="badge badge-primary"><%= @order.state %></span></small></h1>
+      <h1>Ordem #<%= @order.id %> <small><span class="badge badge-primary"><%= @status %></span></small></h1>
       <ul class="list-unstyled">
-        <li><strong>ISSUED ON</strong> <%= @order.created_at.to_date %></li>
-        <li><strong>Subject</strong> <%= @order.subject.name %></li>
+        <li><strong>Emitido em</strong> <%= @order.created_at.to_date %></li>
+        <li><strong>Matéria</strong> <%= @order.subject.name %></li>
         <li><strong>TOTAL</strong> <%= humanized_money_with_symbol @order.amount %></li>
         </li>
       </ul>

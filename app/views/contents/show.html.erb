@@ -3,7 +3,7 @@
     <a class="subject-title" href="#"><%= @subject.name %></a>
       <% @all_classes.order(:order).each_with_index do |cont, index| %>
         <% if current_user.subjects.include?(@subject) || index == 0 %>
-          <%= link_to course_subject_content_path(@course , @subject, cont), class: 'link' do %>
+          <%= link_to course_subject_content_path(@course , @subject, cont), class: 'linkin' do %>
             <button class="dropdown-btn" >
             <h6 class="mc-text-h6 margin-bottom-04"><i class="far fa-play-circle"></i> <%= index + 1 %>. <%= cont.name.capitalize %></h6>
             </button>
